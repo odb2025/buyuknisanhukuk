@@ -222,12 +222,10 @@ header .dropdown li a:hover {
     background-color: #f9f9f9;
 }
 
-/* Logo saydamlık */
+/* Logo Saydamlık - %0 */
 body {
     background: url('logo.png') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    background: url('logo.png') no-repeat center center fixed;
-    background-size: cover;
-    opacity: 0.5; /* Sadece logo için saydamlık */
+    opacity: 1; /* Logo saydamlığı sıfırlanmış durumda */
 }
