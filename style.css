@@ -2,14 +2,26 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Üst Menü (Header) */
 header {
-    background: #333;
+    background: #004d40;
     color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
@@ -19,26 +31,53 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
+/* Ana Bölüm (Hero Section) */
+.hero {
+    background: #800020;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
 }
 
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #004d40;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #002b22;
+}
+
+/* Alt Kısım (Footer) */
 footer {
-    background: #333;
+    background: #004d40;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 15px 0;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
