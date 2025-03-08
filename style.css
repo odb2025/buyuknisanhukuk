@@ -26,6 +26,7 @@ header nav ul {
 
 header nav ul li {
     margin: 0 20px;
+    position: relative;
 }
 
 header nav ul li a {
@@ -36,6 +37,34 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown Menü */
+header nav ul li:hover .dropdown {
+    display: block;
+}
+
+header .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #770000;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+header .dropdown li {
+    margin: 10px 0;
+}
+
+header .dropdown li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .dropdown li a:hover {
     text-decoration: underline;
 }
 
