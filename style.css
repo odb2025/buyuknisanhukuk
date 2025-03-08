@@ -77,4 +77,68 @@ header .dropdown li a:hover {
     header nav ul li {
         margin: 10px 0;
     }
+}/* Ceza Hukuku sayfasına özel stiller */
+.ceza-hukuku-page .splash-container {
+    background-image: url('splash-image.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;  /* Arka planı silikleştiriyoruz */
+    height: 100vh;  /* Sayfa yüksekliği kadar olacak */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceza-hukuku-page .content {
+    background: rgba(0, 0, 0, 0.6);  /* Arka planda yarı saydam siyah */
+    padding: 20px;
+    color: white;  /* Yazı rengi beyaz */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);  /* Yazı gölgeleme */
+    font-family: 'Times New Roman', serif;  /* Yazı tipi */
+    border-radius: 10px;  /* Yuvarlak köşeler */
+}
+
+/* Buton stilleri */
+.ceza-hukuku-page .button {
+    background-color: #004d40;  /* Yeşil buton rengi */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.ceza-hukuku-page .button:hover {
+    background-color: #00332d;  /* Buton rengi değişimi */
+}
+
+/* Sayfa başlığı ve içerik düzenlemeleri */
+header {
+    background-color: #770000;  /* Bordo renk arka plan */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
 }
