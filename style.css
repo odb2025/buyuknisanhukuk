@@ -2,10 +2,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif; /* Times New Roman fontu */
-    background: url('logo.png') no-repeat center center fixed; /* Logo arka plan olarak kullanılıyor */
-    background-size: cover; /* Arka planın tüm ekranı kaplaması */
-    height: 100vh; /* Sayfanın tamamını kaplar */
+    font-family: 'Times New Roman', Times, serif;
+    background: url('logo.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
 /* Üst Menü (Header) */
@@ -79,23 +79,19 @@ header .dropdown li a:hover {
     }
 }
 
-/* Sayfa başlığı ve içerik düzenlemeleri */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: gray;
-}
-
 /* Çalışma Alanlarımız Sayfası */
 .services {
-    text-align: center;
-    padding: 50px 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px; /* Sol kenardan biraz uzak */
 }
 
 .services h2 {
     font-size: 32px;
     color: #770000;
+    margin-bottom: 30px;
 }
 
 .services ul {
@@ -104,7 +100,7 @@ footer {
 }
 
 .services ul li {
-    margin: 20px 0;
+    margin: 30px 0; /* Her öğe arasına daha fazla mesafe ekledim */
 }
 
 .services .button {
@@ -115,6 +111,8 @@ footer {
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
+    display: block;
+    width: 200px;  /* Buton genişliğini sabitledim */
 }
 
 .services .button:hover {
@@ -126,7 +124,7 @@ footer {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Yarı saydam siyah arka plan */
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     color: white;
 }
@@ -159,24 +157,24 @@ footer {
     background-image: url('splash-image.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.4;  /* Arka planı silikleştiriyoruz */
-    height: 100vh;  /* Sayfa yüksekliği kadar olacak */
+    opacity: 0.4;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .ceza-hukuku-page .content {
-    background: rgba(0, 0, 0, 0.6);  /* Arka planda yarı saydam siyah */
+    background: rgba(0, 0, 0, 0.6);
     padding: 20px;
-    color: white;  /* Yazı rengi beyaz */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);  /* Yazı gölgeleme */
-    font-family: 'Times New Roman', serif;  /* Yazı tipi */
-    border-radius: 10px;  /* Yuvarlak köşeler */
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    font-family: 'Times New Roman', serif;
+    border-radius: 10px;
 }
 
 .ceza-hukuku-page .button {
-    background-color: #004d40;  /* Yeşil buton rengi */
+    background-color: #004d40;
     color: white;
     padding: 15px 30px;
     font-size: 18px;
@@ -186,7 +184,7 @@ footer {
 }
 
 .ceza-hukuku-page .button:hover {
-    background-color: #00332d;  /* Buton rengi değişimi */
+    background-color: #00332d;
 }
 
 /* Çalışma Alanlarımız dropdown stilleri */
@@ -220,6 +218,6 @@ header .dropdown li a:hover {
 
 /* İletişim sayfası stil iyileştirmesi */
 .contact input, .contact textarea {
-    border: 1px solid #770000; /* Bordo kenarlık */
-    background-color: #f9f9f9;  /* Açık arka plan rengi */
+    border: 1px solid #770000;
+    background-color: #f9f9f9;
 }
