@@ -6,7 +6,6 @@ body {
     background: url('logo.png') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    opacity: 0.5; /* Logo'yu %50 saydam hale getiriyor */
 }
 
 /* Üst Menü (Header) */
@@ -16,7 +15,6 @@ header {
     padding: 20px 0;
     text-align: center;
     position: relative;
-    opacity: 1; /* Header tamamen opak */
 }
 
 header nav ul {
@@ -222,4 +220,14 @@ header .dropdown li a:hover {
 .contact input, .contact textarea {
     border: 1px solid #770000;
     background-color: #f9f9f9;
+}
+
+/* Logo saydamlık */
+body {
+    background: url('logo.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    background: url('logo.png') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.5; /* Sadece logo için saydamlık */
 }
