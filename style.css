@@ -49,6 +49,8 @@ header nav ul li:hover .dropdown {
 header .dropdown {
     display: none;
     position: absolute;
+    top: 100%; /* Menüyü alt tarafa yerleştir */
+    left: 0;
     background-color: #770000;
     padding: 10px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -181,7 +183,6 @@ header .dropdown li a:hover {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
 }
 
 .ceza-hukuku-page .button:hover {
