@@ -3,7 +3,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif; /* Times New Roman fontu */
-    background-color: #f4f4f4; /* Arka plan rengini açık tutuyoruz */
+    background: url('logo.png') no-repeat center center fixed; /* Logo arka plan olarak kullanılıyor */
+    background-size: cover; /* Arka planın tüm ekranı kaplaması */
+    height: 100vh; /* Sayfanın tamamını kaplar */
 }
 
 /* Üst Menü (Header) */
@@ -66,54 +68,6 @@ header .dropdown li a:hover {
     text-decoration: underline;
 }
 
-/* Ana Sayfa İçeriği */
-.main-content {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.hero {
-    background-color: #004d40; /* Koyu yeşil arka plan */
-    color: white;
-    padding: 50px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-.buttons {
-    margin-top: 30px;
-}
-
-.button {
-    background-color: #004d40;  /* Koyu yeşil buton rengi */
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 10px;
-}
-
-.button:hover {
-    background-color: #00332d;  /* Buton rengi değişimi */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
-    color: gray;
-}
-
 /* Mobil Uyumluluk */
 @media (max-width: 768px) {
     header nav ul {
@@ -123,20 +77,136 @@ footer {
     header nav ul li {
         margin: 10px 0;
     }
+}
 
-    .hero h1 {
-        font-size: 2rem;
-    }
+/* Sayfa başlığı ve içerik düzenlemeleri */
+header {
+    background-color: #770000;  /* Bordo renk arka plan */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
 
-    .hero p {
-        font-size: 1rem;
-    }
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    .buttons {
-        flex-direction: column;
-    }
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
 
-    .button {
-        margin: 10px 0;
-    }
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Çalışma Alanlarımız Sayfası */
+.services {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #770000;
+}
+
+.services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services ul li {
+    margin: 20px 0;
+}
+
+.services .button {
+    background-color: #004d40;  /* Yeşil buton rengi */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.services .button:hover {
+    background-color: #00332d;  /* Buton rengi değişimi */
+}
+
+/* İletişim Sayfası */
+.contact form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Yarı saydam siyah arka plan */
+    border-radius: 10px;
+    color: white;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    background-color: #004d40;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact button:hover {
+    background-color: #00332d;
+}
+
+/* Ceza Hukuku sayfasına özel stiller */
+.ceza-hukuku-page .splash-container {
+    background-image: url('splash-image.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;  /* Arka planı silikleştiriyoruz */
+    height: 100vh;  /* Sayfa yüksekliği kadar olacak */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceza-hukuku-page .content {
+    background: rgba(0, 0, 0, 0.6);  /* Arka planda yarı saydam siyah */
+    padding: 20px;
+    color: white;  /* Yazı rengi beyaz */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);  /* Yazı gölgeleme */
+    font-family: 'Times New Roman', serif;  /* Yazı tipi */
+    border-radius: 10px;  /* Yuvarlak köşeler */
+}
+
+.ceza-hukuku-page .button {
+    background-color: #004d40;  /* Yeşil buton rengi */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.ceza-hukuku-page .button:hover {
+    background-color: #00332d;  /* Buton rengi değişimi */
 }
