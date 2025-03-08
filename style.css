@@ -2,18 +2,17 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-    background: url('logo.png') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman fontu */
+    background-color: #f4f4f4; /* Arka plan rengini açık tutuyoruz */
 }
 
 /* Üst Menü (Header) */
 header {
-    background-color: #770000;
+    background-color: #770000; /* Bordo renk */
     color: white;
     padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 header nav ul {
@@ -39,7 +38,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Dropdown Menü (Çalışma Alanlarımız) */
+/* Dropdown Menü */
 header nav ul li:hover .dropdown {
     display: block;
 }
@@ -67,6 +66,54 @@ header .dropdown li a:hover {
     text-decoration: underline;
 }
 
+/* Ana Sayfa İçeriği */
+.main-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero {
+    background-color: #004d40; /* Koyu yeşil arka plan */
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.button {
+    background-color: #004d40;  /* Koyu yeşil buton rengi */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #00332d;  /* Buton rengi değişimi */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: gray;
+}
+
 /* Mobil Uyumluluk */
 @media (max-width: 768px) {
     header nav ul {
@@ -74,6 +121,22 @@ header .dropdown li a:hover {
     }
 
     header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .button {
         margin: 10px 0;
     }
 }
