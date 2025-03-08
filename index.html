@@ -5,30 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Büyüknisan Hukuk Bürosu</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- 5 saniye sonra yönlendirme -->
+    <script>
+        setTimeout(function() {
+            window.location.href = "index.html"; // Ana sayfaya yönlendir
+        }, 5000);
+    </script>
 </head>
-<body>
-
-    <!-- Başlık -->
-    <header>
-        <h1>BÜYÜKNİSAN HUKUK BÜROSU</h1>
-    </header>
-
-    <!-- Hizmetler Bölümü -->
-    <section id="hizmetler">
-        <h2>Hizmetlerimiz</h2>
-        <ul>
-            <li>Ceza Hukuku</li>
-            <li>İdare Hukuku</li>
-            <li>Özel Hukuk</li>
-            <li>Yabancılar Hukuku</li>
-        </ul>
-    </section>
-
-    <!-- İletişim Bölümü -->
-    <section id="iletisim">
-        <h2>İletişim</h2>
-        <p>E-posta: <a href="mailto:info@buyuknisanhukuk.com">info@buyuknisanhukuk.com</a></p>
-    </section>
-
+<body class="splash-screen">
+    <div class="splash-container">
+        <img src="splash-image.jpg" alt="Büyüknisan Hukuk Bürosu" class="splash-image">
+    </div>
 </body>
 </html>
