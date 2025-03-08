@@ -17,15 +17,6 @@ header {
     position: relative;
 }
 
-header .logo-container {
-    margin-bottom: 10px;
-}
-
-header .logo {
-    max-width: 150px; /* Logo boyutu */
-    height: auto;
-}
-
 /* Menü Butonları */
 nav ul {
     list-style: none;
