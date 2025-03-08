@@ -3,13 +3,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('logo.png') no-repeat center center fixed; /* Logo resmini arka plan olarak kullan */
+    background-size: cover; /* Arka planın tam ekran kaplamasını sağlar */
+    height: 100vh; /* Sayfanın tamamını kaplar */
 }
 
 /* Header (Üst Menü) */
 header {
-    background-color: #770000; /* Bordo renk */
+    background-color: rgba(119, 0, 0, 0.8); /* Bordo renk, şeffaflık ekledik */
     color: white;
     padding: 15px 0;
     text-align: center;
