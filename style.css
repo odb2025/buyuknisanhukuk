@@ -1,0 +1,67 @@
+/* Genel Stil */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header (Üst Menü) */
+header {
+    background-color: #770000; /* Bordo renk */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+header .logo-container {
+    margin-bottom: 10px;
+}
+
+header .logo {
+    max-width: 150px; /* Logo boyutu */
+    height: auto;
+}
+
+/* Menü Butonları */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* İçerik Bölümleri */
+section {
+    padding: 50px;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* İçerik bölümü için hafif karartma */
+    margin: 20px;
+    border-radius: 10px;
+}
+
+section h2 {
+    font-size: 2em;
+}
+
+section p {
+    font-size: 1.2em;
+}
