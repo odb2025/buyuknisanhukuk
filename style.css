@@ -1,26 +1,20 @@
-/* Genel Sıfırlama */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Sayfa Genel Ayarları */
+/* Genel Sayfa Ayarları */
 body {
     font-family: "Times New Roman", Times, serif;
-    background-color: white;
-    color: black;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Header */
+/* Üst Menü */
 header {
-    background: white;
-    color: black;
+    background: #004d40; /* Koyu Yeşil */
+    color: white;
     padding: 20px;
     text-align: center;
 }
 
-/* Menü */
 nav ul {
     list-style: none;
     padding: 0;
@@ -33,23 +27,26 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Ana Bölüm */
-.hero {
-    background: white;
-    color: black;
-    padding: 50px 0;
-    text-align: center;
+/* Hizmetler ve İletişim Bölümü */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #800020; /* Bordo */
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 /* Footer */
 footer {
-    background: white;
-    color: black;
+    background: #004d40; /* Koyu Yeşil */
+    color: white;
     text-align: center;
     padding: 15px;
 }
