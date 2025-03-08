@@ -3,9 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif; /* Times New Roman fontu */
-    background: url('logo.png') no-repeat center center fixed; /* Logo arka plan olarak kullanılıyor */
-    background-size: cover; /* Arka planın tüm ekranı kaplaması */
-    height: 100vh; /* Sayfanın tamamını kaplar */
+    background-color: #f4f4f4; /* Genel arka plan rengi */
 }
 
 /* Üst Menü (Header) */
@@ -41,37 +39,85 @@ header nav ul li a:hover {
 }
 
 /* Dropdown Menü */
-header nav ul li:hover .dropdown-content {
+header nav ul li:hover .dropdown {
     display: block;
 }
 
 header .dropdown {
-    display: inline-block;
-    position: relative;
-}
-
-header .dropdown-content {
     display: none;
     position: absolute;
     background-color: #770000;
     padding: 10px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 5px;
 }
 
-header .dropdown-content li {
+header .dropdown li {
     margin: 10px 0;
 }
 
-header .dropdown-content li a {
+header .dropdown li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-header .dropdown-content li a:hover {
+header .dropdown li a:hover {
     text-decoration: underline;
+}
+
+/* Sayfa Başlığı ve İçerik Düzeni */
+section.content {
+    padding: 30px;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste Stili */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Dropdown Menü (Çalışma Alanlarımız) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #770000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.dropdown-content li a:hover {
+    text-decoration: underline;
+}
+
+/* Çalışma Alanlarımız menüsüne hover efekti */
+li.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Mobil Uyumluluk */
@@ -82,5 +128,14 @@ header .dropdown-content li a:hover {
 
     header nav ul li {
         margin: 10px 0;
+    }
+
+    header .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+
+    header .dropdown {
+        display: none;
     }
 }

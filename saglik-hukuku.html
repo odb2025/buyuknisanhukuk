@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sağlık Hukuku</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- CSS Dosyasına bağlantı -->
 </head>
 <body>
     <header>
-        <h1>Sağlık Hukuku</h1>
+        <h1>Büyüknisan Hukuk Bürosu</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="calisma-alanlarimiz.html">Çalışma Alanlarımız</a></li>
+                <!-- Çalışma Alanlarımız Menü Yapısı -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Çalışma Alanlarımız</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
+                        <li><a href="idare-hukuku.html">İdare Hukuku</a></li>
+                        <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
+                        <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
+                        <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
+                    </ul>
+                </li>
                 <li><a href="iletisim.html">İletişim</a></li>
             </ul>
         </nav>
     </header>
+
     <section class="content">
         <h2>Sağlık Hukuku</h2>
+        <p>Sağlık hukuku, sağlık hizmetleri ve hastaların haklarını koruma altına alır. Aşağıdaki alanlarda hizmet veririz:</p>
+        <ul>
+            <li><strong>Tıbbi Hata Davaları:</strong> Sağlık hizmetleri sırasında yaşanan hata ve ihmal nedeniyle dava açarız.</li>
+            <li><strong>Sağlık Sigortası Hukuku:</strong> Sigorta şirketlerine karşı hak arayışı ve dava sürecinde destek sunarız.</li>
+            <li><strong>Hastalık ve Tedavi Süreçleri:</strong> Tıbbi yanlışlıklar ve tedavi sürecindeki olumsuzluklara karşı hukuki yardım sağlar.</li>
+        </ul>
     </section>
+
     <footer>
         <p>&copy; 2025 Büyüknisan Hukuk Bürosu</p>
     </footer>
