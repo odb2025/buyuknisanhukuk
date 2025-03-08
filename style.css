@@ -1,52 +1,52 @@
-/* Genel Sayfa Ayarları */
+/* Genel Ayarlar */
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", serif;
+    background-color: white;
+    color: black;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: black; /* Yazı rengi siyah */
+    text-align: center;
 }
 
-/* Üst Menü */
+/* Başlık Ayarları */
 header {
-    background: #083224; /* Koyu Yeşil */
+    background: #083224;
     color: white;
     padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Hizmetler Bölümü */
+#hizmetler {
+    margin: 20px;
+}
+
+h2 {
+    color: #770000;
+}
+
+/* İletişim Bölümü */
+#iletisim {
+    margin: 20px;
+}
+/* Açılış (Splash) Sayfası */
+.splash-screen {
+    background: #083224;  /* Açılış sayfası arka plan rengi (Koyu Yeşil) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.splash-container {
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Hizmetler ve İletişim Bölümü */
-.container {
+.splash-image {
     width: 80%;
-    margin: auto;
-    padding: 20px;
-    background: #770000; /* Bordo */
-    color: black; /* Yazı rengi siyah */
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-/* Footer */
-footer {
-    background: #083224; /* Koyu Yeşil */
-    color: white;
-    text-align: center;
-    padding: 15px;
+    max-width: 600px;
 }
