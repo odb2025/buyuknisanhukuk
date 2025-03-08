@@ -80,28 +80,6 @@ header .dropdown li a:hover {
 }
 
 /* Sayfa başlığı ve içerik düzenlemeleri */
-header {
-    background-color: #770000;  /* Bordo renk arka plan */
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
 footer {
     text-align: center;
     margin-top: 20px;
@@ -209,4 +187,39 @@ footer {
 
 .ceza-hukuku-page .button:hover {
     background-color: #00332d;  /* Buton rengi değişimi */
+}
+
+/* Çalışma Alanlarımız dropdown stilleri */
+header .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #770000;
+    min-width: 200px;
+    padding: 10px;
+    display: none;
+}
+
+header nav ul li:hover .dropdown {
+    display: block;
+}
+
+header .dropdown li {
+    margin: 10px 0;
+}
+
+header .dropdown li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .dropdown li a:hover {
+    text-decoration: underline;
+}
+
+/* İletişim sayfası stil iyileştirmesi */
+.contact input, .contact textarea {
+    border: 1px solid #770000; /* Bordo kenarlık */
+    background-color: #f9f9f9;  /* Açık arka plan rengi */
 }
