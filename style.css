@@ -6,6 +6,7 @@ body {
     background: url('logo.png') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
+    opacity: 0.5; /* Logo'yu %50 saydam hale getiriyor */
 }
 
 /* Üst Menü (Header) */
@@ -15,6 +16,7 @@ header {
     padding: 20px 0;
     text-align: center;
     position: relative;
+    opacity: 1; /* Header tamamen opak */
 }
 
 header nav ul {
