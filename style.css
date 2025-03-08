@@ -2,58 +2,77 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('logo.png') no-repeat center center fixed; /* Logo resmini arka plan olarak kullan */
-    background-size: cover; /* Arka planın tam ekran kaplamasını sağlar */
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman fontu */
+    background: url('logo.png') no-repeat center center fixed; /* Logo arka plan olarak kullanılıyor */
+    background-size: cover; /* Arka planın tüm ekranı kaplaması */
     height: 100vh; /* Sayfanın tamamını kaplar */
 }
 
-/* Header (Üst Menü) */
+/* Üst Menü (Header) */
 header {
-    background-color: rgba(119, 0, 0, 0.8); /* Bordo renk, şeffaflık ekledik */
+    background-color: #770000; /* Bordo renk */
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
     position: relative;
 }
 
-/* Menü Butonları */
-nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
-nav ul li {
-    margin: 0 15px;
+header nav ul li {
+    margin: 0 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
     font-weight: bold;
+    font-size: 18px;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* İçerik Bölümleri */
-section {
-    padding: 50px;
+/* Ana Sayfa İçeriği */
+.main-content {
     color: white;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* İçerik bölümü için hafif karartma */
-    margin: 20px;
+    padding: 50px;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Sayfa içeriği için karartma */
     border-radius: 10px;
 }
 
-section h2 {
-    font-size: 2em;
+.main-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-section p {
+.main-content p {
     font-size: 1.2em;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .main-content h1 {
+        font-size: 2em;
+    }
+
+    .main-content p {
+        font-size: 1em;
+    }
 }
