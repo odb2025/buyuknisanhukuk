@@ -41,11 +41,16 @@ header nav ul li a:hover {
 }
 
 /* Dropdown Menü */
-header nav ul li:hover .dropdown {
+header nav ul li:hover .dropdown-content {
     display: block;
 }
 
 header .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+header .dropdown-content {
     display: none;
     position: absolute;
     background-color: #770000;
@@ -55,17 +60,17 @@ header .dropdown {
     border-radius: 5px;
 }
 
-header .dropdown li {
+header .dropdown-content li {
     margin: 10px 0;
 }
 
-header .dropdown li a {
+header .dropdown-content li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-header .dropdown li a:hover {
+header .dropdown-content li a:hover {
     text-decoration: underline;
 }
 
@@ -78,70 +83,4 @@ header .dropdown li a:hover {
     header nav ul li {
         margin: 10px 0;
     }
-
-    header .dropdown-content {
-        width: 100%;
-    }
-}
-
-/* Sayfa başlığı ve içerik düzenlemeleri */
-header {
-    background-color: #770000;  /* Bordo renk arka plan */
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: gray;
-}
-
-/* Tüm sayfalarda aynı arka plan ve yazı stili */
-body {
-    background: url('logo.png') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Times New Roman', serif;
-}
-
-/* İçerik düzeni */
-.content {
-    background: rgba(0, 0, 0, 0.6); /* Yarı saydam arka plan */
-    padding: 20px;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    font-family: 'Times New Roman', serif;
-    border-radius: 10px;
-}
-
-/* Buton stilleri */
-.button {
-    background-color: #004d40;  /* Yeşil buton rengi */
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #00332d;  /* Buton rengi değişimi */
 }
