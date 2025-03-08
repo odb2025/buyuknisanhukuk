@@ -42,7 +42,7 @@ nav ul li a {
 
 /* Ana Bölüm (Hero Section) */
 .hero {
-    background-color: #800020 !important;
+    background-color: red !important;
     color: #ffffff;
     padding: 50px 0;
     text-align: center;
