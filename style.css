@@ -106,6 +106,7 @@ header .dropdown li a:hover {
     margin: 30px 0; /* Her öğe arasına daha fazla mesafe ekledim */
 }
 
+/* Çalışma Alanlarımız Butonu */
 .services .button {
     background-color: #004d40;  /* Yeşil buton rengi */
     color: white;
@@ -116,6 +117,8 @@ header .dropdown li a:hover {
     border-radius: 5px;
     display: block;
     width: 200px;  /* Buton genişliğini sabitledim */
+    text-align: center;
+    margin: 20px 0; /* Buton ile metin arasına mesafe */
 }
 
 .services .button:hover {
