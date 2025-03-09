@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        header {
+            background: #083224; /* Tamamen görünür */
+            padding: 10px 0; /* Yazı yüksekliği kadar ayarlandı */
+            text-align: center;
+        }
+        header nav ul {
+            background: #083224; /* tamamen görünür */
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        header nav ul li a:hover {
+            transform: scale(1.1);
+            background-color: #0a4a2a;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .services {
+            position: absolute;
+            right: 10%;
+            bottom: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services li {
+            margin: 10px 0;
+        }
+        .services a {
+            display: block;
+            background: #083224;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        .services a:hover {
+            background: #0a4a2a;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        footer {
+            background: #083224; /* Tamamen görünür */
+            color: white;
+            padding: 1px 0; /* Yazı yüksekliği kadar ayarlandı */
+            text-align: center;
+            font-size: 10px;
+        }
+        .dropdown {
+            background: #083224; /* Çalışma Alanlarımız dropdown menüsü tamamen görünür */
+            position: absolute;
+            display: none;
+            list-style: none;
+            padding: 10px;
+        }
+        .dropdown a {
+            background: #083224;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .dropdown a:hover {
+            background: #083224;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li>
+                    <a href="calisma-alanlarimiz.html">ÇALIŞMA ALANLARIMIZ</a>
+                    <ul class="dropdown">
+                        <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
+                        <li><a href="idare-hukuku.html">İdare Hukuku</a></li>
+                        <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
+                        <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
+                        <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
+                    </ul>
+                </li>
+                <li><a href="ekibimiz.html">EKİBİMİZ</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        <p>&copy; 2025 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
