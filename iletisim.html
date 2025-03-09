@@ -73,12 +73,12 @@
         }
         .contact-form {
             position: absolute;
-            left: 10%;
+            left: 5%; /* Formu biraz sola kaydırdık */
             bottom: 10%;
             background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 30px; /* Formu büyütmek için padding değerini artırdık */
             border-radius: 8px;
-            width: 300px;
+            width: 400px; /* Formu büyütmek için genişlik değerini artırdık */
         }
         .contact-form h2 {
             margin-top: 0;
@@ -151,7 +151,7 @@
 
     <div class="contact-form">
         <h2>İletişim Formu</h2>
-        <form action="submit_form.php" method="post">
+        <form action="mailto:soruyorum@buyuknisanhukuk.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Adınız" required>
             <input type="email" name="email" placeholder="E-posta Adresiniz" required>
             <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
