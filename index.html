@@ -16,47 +16,34 @@
         }
         header nav ul {
             background: rgba(255, 255, 255, 0); /* Tamamen saydam */
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        header nav ul li {
-            position: relative;
-            margin: 0 15px;
-        }
-        header nav ul li a {
-            color: #083224;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        header nav ul li .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            list-style: none;
-        }
-        header nav ul li:hover .dropdown {
-            display: block;
-        }
-        header nav ul li .dropdown li {
-            margin: 5px 0;
-        }
-        header nav ul li .dropdown li a {
-            color: #083224;
-            font-size: 16px;
-            text-decoration: none;
-            display: block;
         }
         footer {
             background: rgba(255, 255, 255, 0); /* Tamamen saydam */
             color: rgba(255, 255, 255, 0.5); /* Yazıyı görünür kılmak için hafif saydamlık */
+        }
+        a {
+            color: #0B3D2E !important; /* Koyu yeşil butonlar */
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown li {
+            display: block;
+            padding: 10px;
+        }
+        .dropdown li a {
+            color: #0B3D2E !important; /* Koyu yeşil */
+            text-decoration: none;
+        }
+        .dropdown li a:hover {
+            text-decoration: underline;
+        }
+        .dropdown-container:hover .dropdown {
+            display: block;
         }
     </style>
 </head>
@@ -65,7 +52,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">ANA SAYFA</a></li>
-                <li>
+                <li class="dropdown-container">
                     <a href="calisma-alanlarimiz.html">ÇALIŞMA ALANLARIMIZ</a>
                     <ul class="dropdown">
                         <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
