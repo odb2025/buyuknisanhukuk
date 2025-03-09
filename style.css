@@ -1,12 +1,103 @@
-/* Çalışma Alanlarımız Butonları */
-.services {
+/* Genel Stil */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: url('giris.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    opacity: 1;
+}
+
+/* Üst Menü (Header) */
+header {
+    background-color: transparent;
+    color: white;
+    padding: 5px 0; /* Yüksekliği %10 azalttık */
+    text-align: center;
+    position: relative;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+header nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown Menü */
+header nav ul li:hover .dropdown {
+    display: block;
+}
+
+header .dropdown {
+    display: none;
     position: absolute;
-    bottom: 10%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
+    background-color: transparent;
+    padding: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 110%; /* Dropdown menüsünü %10 genişlettik */
+}
+
+header .dropdown li {
+    margin: 10px 0;
+}
+
+header .dropdown li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header .dropdown li a:hover {
+    text-decoration: underline;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Çalışma Alanlarımız Sayfası */
+.services {
+    padding: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+.services h2 {
+    font-size: 25px;
+    color: #004d40;
+    margin-bottom: 30px;
 }
 
 .services ul {
@@ -15,26 +106,69 @@
 }
 
 .services ul li {
-    margin: 15px 0;
+    margin: 30px 0;
 }
 
-/* Buton Stili */
+/* Çalışma Alanlarımız Butonu */
 .services .button {
+    background-color: #004d40;
+    color: rgb(56, 0, 0);
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.services .button:hover {
+    background-color: #00332d;
+}
+
+/* İletişim Sayfası */
+.contact form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: white;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
     background-color: #004d40;
     color: white;
     padding: 15px 30px;
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;
-    display: block;
-    width: 220px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    border: none;
 }
 
-.services .button:hover {
+.contact button:hover {
     background-color: #00332d;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Footer - © 2025 Büyüknisan Hukuk Bürosu */
+footer {
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
