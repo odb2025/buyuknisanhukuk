@@ -7,35 +7,56 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-image: url('calisma-alanlarimiz.png');
+            background-image: url('giris.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        .services {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            text-align: right;
+        header {
+            background: #083224; /* Tamamen görünür */
+            padding: 10px 0; /* Yazı yüksekliği kadar ayarlandı */
+            text-align: center;
         }
-        .services ul {
-            list-style: none;
+        header nav ul {
+            background: #083224; /* tamamen görünür */
             padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
         }
-        .services ul li {
-            margin-bottom: 10px;
+        header nav ul li {
+            margin: 0 15px;
         }
-        .services ul li a {
-            display: block;
-            background-color: #004d40;
+        header nav ul li a {
             color: white;
-            padding: 10px 20px;
             text-decoration: none;
+            font-size: 25px;
             font-weight: bold;
-            border-radius: 5px;
         }
-        .services ul li a:hover {
-            background-color: #00332d;
+        footer {
+            background: #083224; /* Tamamen görünür */
+            color: white;
+            padding: 1px 0; /* Yazı yüksekliği kadar ayarlandı */
+            text-align: center;
+            font-size: 10px;
+        }
+        .dropdown {
+            background: #083224; /* Çalışma Alanlarımız dropdown menüsü tamamen görünür */
+            position: absolute;
+            display: none;
+            list-style: none;
+            padding: 10px;
+        }
+        .dropdown a {
+            background: #083224;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .dropdown a:hover {
+            background: #083224;
         }
     </style>
 </head>
