@@ -71,6 +71,37 @@
             transform: scale(1.1);
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
+        .contact-form {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+        }
+        .contact-form h2 {
+            margin-top: 0;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact-form button {
+            background-color: #083224;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0a4a2a;
+        }
         footer {
             background: #083224; /* Tamamen görünür */
             color: white;
@@ -117,6 +148,16 @@
             </ul>
         </nav>
     </header>
+
+    <div class="contact-form">
+        <h2>İletişim Formu</h2>
+        <form action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Adınız" required>
+            <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+            <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
 
     <footer>
         <p>&copy; 2025 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
