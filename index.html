@@ -78,6 +78,23 @@
             text-align: center;
             font-size: 10px;
         }
+        .dropdown {
+            background: #083224; /* Çalışma Alanlarımız dropdown menüsü tamamen görünür */
+            position: absolute;
+            display: none;
+            list-style: none;
+            padding: 10px;
+        }
+        .dropdown a {
+            background: #083224;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .dropdown a:hover {
+            background: #083224;
+        }  
     </style>
 </head>
 <body>
@@ -87,14 +104,22 @@
                 <li><a href="index.html">ANA SAYFA</a></li>
                 <li>
                     <a href="calisma-alanlarimiz.html">ÇALIŞMA ALANLARIMIZ</a>
+                    <ul class="dropdown">
+                        <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
+                        <li><a href="idare-hukuku.html">İdare Hukuku</a></li>
+                        <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
+                        <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
+                        <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
+                    </ul>
                 </li>
                 <li><a href="ekibimiz.html">EKİBİMİZ</a></li>
                 <li><a href="iletisim.html">İLETİŞİM</a></li>
             </ul>
         </nav>
     </header>
+
     <footer>
-        <p>&copy; 2025 Büyüknisan Hukuk Bürosu</p>
+        <p>&copy; 2025 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
     </footer>
 </body>
 </html>
