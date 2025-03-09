@@ -13,7 +13,7 @@ body {
 header {
     background-color: transparent;
     color: white;
-    padding: 5px 0; /* Yüksekliği %10 azalttık */
+    padding: 5px 0;
     text-align: center;
     position: relative;
 }
@@ -57,7 +57,7 @@ header .dropdown {
     padding: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    width: 110%; /* Dropdown menüsünü %10 genişlettik */
+    width: 110%;
 }
 
 header .dropdown li {
@@ -79,7 +79,6 @@ header .dropdown li a:hover {
     header nav ul {
         flex-direction: column;
     }
-
     header nav ul li {
         margin: 10px 0;
     }
@@ -88,10 +87,10 @@ header .dropdown li a:hover {
 /* Çalışma Alanlarımız Sayfası */
 .services {
     padding: 50px;
-    display: grid;
+    display: flex;
     flex-direction: column;
-    align-items: normal;
-    margin-left: 30px;
+    align-items: center;
+    text-align: center;
 }
 
 .services h2 {
@@ -112,16 +111,16 @@ header .dropdown li a:hover {
 /* Çalışma Alanlarımız Butonu */
 .services .button {
     background-color: #004d40;
-    color: rgb(56, 0, 0);
+    color: white;
     padding: 15px 30px;
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
     display: block;
-    width: 200px;
+    width: 250px;
     text-align: center;
-    margin: 20px 0;
+    margin: 10px auto;
 }
 
 .services .button:hover {
