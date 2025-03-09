@@ -22,27 +22,30 @@
             color: rgba(255, 255, 255, 0.5); /* Yazıyı görünür kılmak için hafif saydamlık */
         }
         a {
-            color: #0B3D2E !important; /* Koyu yeşil butonlar */
+            color: #0B3D2E !important; /* Tüm butonları koyu yeşil yap */
         }
         .dropdown {
             display: none;
             position: absolute;
-            background-color: white;
+            background: rgba(11, 61, 46, 0.75); /* %25 saydamlık */
+            padding: 10px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
         .dropdown li {
-            display: block;
-            padding: 10px;
+            list-style: none;
+            margin: 5px 0;
         }
         .dropdown li a {
-            color: #0B3D2E !important; /* Koyu yeşil */
+            color: white;
             text-decoration: none;
+            padding: 5px 10px;
+            display: block;
         }
         .dropdown li a:hover {
-            text-decoration: underline;
+            background: rgba(255, 255, 255, 0.2);
         }
-        .dropdown-container:hover .dropdown {
+        li:hover .dropdown {
             display: block;
         }
     </style>
@@ -52,7 +55,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">ANA SAYFA</a></li>
-                <li class="dropdown-container">
+                <li>
                     <a href="calisma-alanlarimiz.html">ÇALIŞMA ALANLARIMIZ</a>
                     <ul class="dropdown">
                         <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
