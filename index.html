@@ -100,6 +100,11 @@
     </style>
 </head>
 <body>
+    <!-- Yükleme animasyonu -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <nav>
             <ul>
@@ -123,5 +128,12 @@
     <footer>
         <p>&copy; 2025 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
     </footer>
+
+    <script>
+        // Sayfa yüklendiğinde yükleme animasyonunu gizle
+        window.addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
