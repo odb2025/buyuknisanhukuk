@@ -112,13 +112,13 @@ header .dropdown li a:hover {
 .services .button {
     background-color: #004d40;
     color: white;
-    padding: 15px 30px;
-    font-size: 30px;
+    padding: 10px 15px; /* Butonları küçültmek için padding değerlerini azalttık */
+    font-size: 20px; /* Font boyutunu küçülttük */
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
     display: block;
-    width: 250px;
+    width: 200px; /* Buton genişliğini azalttık */
     text-align: center;
     margin: 10px auto;
     border: 2px solid black; /* Siyah çerçeve eklendi */
@@ -126,6 +126,8 @@ header .dropdown li a:hover {
 
 .services .button:hover {
     background-color: #00332d;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 /* İletişim Sayfası */
