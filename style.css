@@ -13,7 +13,7 @@ body {
 header {
     background-color: transparent;
     color: white;
-    padding: 18px 0; /* Yüksekliği %10 azalttık */
+    padding: 5px 0; /* Yüksekliği %10 azalttık */
     text-align: center;
     position: relative;
 }
@@ -54,7 +54,7 @@ header .dropdown {
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     width: 110%; /* Dropdown menüsünü %10 genişlettik */
@@ -163,7 +163,7 @@ header .dropdown li a:hover {
 
 /* Footer - © 2025 Büyüknisan Hukuk Bürosu */
 footer {
-    padding: 10px 20px;
+    padding: 5px;
     background-color: transparent;
     color: white;
     font-size: 25px;
