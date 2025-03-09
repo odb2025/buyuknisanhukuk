@@ -13,30 +13,49 @@
         }
         header {
             background: rgb(0, 60, 1); /* Tamamen görünür */
-            padding: 5px 0; /* Yüksekliği %10 azaltıldı */
+            padding: 10px 0; /* Yazı yüksekliği kadar ayarlandı */
+            text-align: center;
         }
         header nav ul {
             background: rgb(0, 60, 1); /* tamamen görünür */
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
         }
         footer {
             background: rgb(0, 60, 1); /* Tamamen görünür */
-            color: rgb(0, 60, 1); /* Tamamen görünür */
-        }
-        a {
-            color: rgb(0, 60, 1); !important; /* Tüm butonları koyu yeşil yap */
+            color: white;
+            padding: 10px 0; /* Yazı yüksekliği kadar ayarlandı */
+            text-align: center;
+            font-size: 16px;
         }
         .dropdown {
             background: rgb(0, 60, 1); /* Çalışma Alanlarımız dropdown menüsü tamamen görünür */
+            position: absolute;
+            display: none;
+            list-style: none;
+            padding: 10px;
         }
         .dropdown a {
-            background: rgb(0, 60, 1); /* renk tamamen görünsün*/
+            background: rgb(0, 60, 1);
             display: block;
-            padding: 20px;
+            padding: 10px;
             text-decoration: none;
-            color: rgb(0, 60, 1);
+            color: white;
         }
         .dropdown a:hover {
-            background: rgb(0, 60, 1);
+            background: rgb(0, 80, 1);
         }
     </style>
 </head>
@@ -62,9 +81,7 @@
     </header>
 
     <footer>
-        <p style="text-align: center; color: white; font-size: 16px; padding: 5px;">
-            &copy; 2025 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.
-        </p>
+        <p>&copy; 2025 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
     </footer>
 </body>
 </html>
