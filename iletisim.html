@@ -3,42 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('iletisim.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        header {
+            background: rgb(0, 60, 1); /* Tamamen görünür */
+            padding: 10px 0; /* Yazı yüksekliği kadar ayarlandı */
+            text-align: center;
+        }
+        header nav ul {
+            background: rgb(0, 60, 1); /* tamamen görünür */
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        footer {
+            background: rgb(0, 60, 1); /* Tamamen görünür */
+            color: white;
+            padding: 1px 0; /* Yazı yüksekliği kadar ayarlandı */
+            text-align: center;
+            font-size: 10px;
+        }
+        .dropdown {
+            background: rgb(0, 60, 1); /* Çalışma Alanlarımız dropdown menüsü tamamen görünür */
+            position: absolute;
+            display: none;
+            list-style: none;
+            padding: 10px;
+        }
+        .dropdown a {
+            background: rgb(0, 60, 1);
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .dropdown a:hover {
+            background: rgb(0, 80, 1);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>İletişim</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="calisma-alanlarimiz.html">Çalışma Alanlarımız</a></li> <!-- Butonu buraya ekledik -->
-                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li>
+                    <a href="#">ÇALIŞMA ALANLARIMIZ</a>
+                    <ul class="dropdown">
+                        <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
+                        <li><a href="idare-hukuku.html">İdare Hukuku</a></li>
+                        <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
+                        <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
+                        <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
+                    </ul>
+                </li>
+                <li><a href="ekibimiz.html">EKİBİMİZ</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="contact">
-        <h2>Bizimle İletişime Geçin</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">Adınız:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">E-posta:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="message">Mesajınız:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-            <button type="submit">Gönder</button>
-        </form>
-    </section>
-
     <footer>
-        <p>&copy; 2025 Büyüknisan Hukuk Bürosu</p>
+        <p>&copy; 2025 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
     </footer>
 </body>
-<footer>
-    <p>© 2025 Büyüknisan Hukuk Bürosu</p>
-</footer>
 </html>
