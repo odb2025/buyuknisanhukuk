@@ -11,6 +11,8 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+            height: 100vh;
         }
         header {
             background: #083224;
@@ -34,33 +36,39 @@
             font-size: 25px;
             font-weight: bold;
         }
-        footer {
-            background: #083224;
-            color: white;
-            padding: 5px 0;
-            text-align: center;
-            font-size: 10px;
-        }
-        .service-buttons {
-            position: fixed;
-            bottom: 10%;
-            right: 5%;
+        .services {
+            position: absolute;
+            bottom: 20%; /* Alt yarının ortasına yakın */
+            right: 10%; /* Sağ yarının ortasına yakın */
+            transform: translate(50%, 50%);
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        .service-buttons a {
+        .services a {
             background: #083224;
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border-radius: 5px;
-            font-size: 18px;
             text-align: center;
-            transition: 0.3s;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            width: 200px;
         }
-        .service-buttons a:hover {
-            background: #0a4a32;
+        .services a:hover {
+            background: #0a4731;
+        }
+        footer {
+            background: #083224;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -76,7 +84,7 @@
         </nav>
     </header>
 
-    <div class="service-buttons">
+    <div class="services">
         <a href="ceza-hukuku.html">Ceza Hukuku</a>
         <a href="idare-hukuku.html">İdare Hukuku</a>
         <a href="ozel-hukuk.html">Özel Hukuk</a>
