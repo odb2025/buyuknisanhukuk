@@ -90,6 +90,15 @@
             transform: scale(1.1);
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
+        .services .single-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .services .single-row li {
+            flex: 1;
+            margin: 0 5px;
+        }
         footer {
             background: #083224;
             color: white;
@@ -150,7 +159,9 @@
                 <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
                 <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
             </div>
-            <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
+            <div class="single-row">
+                <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
+            </div>
         </ul>
     </div>
 
