@@ -63,6 +63,13 @@
         .services li {
             margin: 10px 0;
         }
+        .services .row {
+            display: flex;
+            justify-content: center;
+        }
+        .services .row li {
+            margin: 0 10px;
+        }
         .services a {
             display: block;
             background: #083224;
@@ -133,10 +140,14 @@
 
     <div class="services">
         <ul>
-            <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
-            <li><a href="idare-hukuku.html">İdare Hukuku</a></li>
-            <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
-            <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
+            <div class="row">
+                <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
+                <li><a href="idare-hukuku.html">İdare Hukuku</a></li>
+            </div>
+            <div class="row">
+                <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
+                <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
+            </div>
             <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
         </ul>
     </div>
