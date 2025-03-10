@@ -98,6 +98,46 @@
         .dropdown a:hover {
             background: #083224;
         }  
+        .menu-button {
+            display: none;
+            background: #083224;
+            color: white;
+            padding: 15px 20px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .menu-button:hover {
+            background-color: #0a4a2a;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .menu-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu-content ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .menu-button {
+                display: block;
+            }
+            header nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+            }
+            header nav ul li {
+                margin: 10px 0;
+            }
+            .menu-content {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
@@ -105,21 +145,24 @@
 
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">ANA SAYFA</a></li>
-                <li>
-                    <a href="calisma-alanlarimiz.html">ÇALIŞMA ALANLARIMIZ</a>
-                    <ul class="dropdown">
-                        <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
-                        <li><a href="idare-hukuku.html">İdare Hukuku</a></li>
-                        <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
-                        <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
-                        <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
-                    </ul>
-                </li>
-                <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
-                <li><a href="iletisim.html">İLETİŞİM</a></li>
-            </ul>
+            <button class="menu-button">MENÜ</button>
+            <div class="menu-content">
+                <ul>
+                    <li><a href="index.html">ANA SAYFA</a></li>
+                    <li>
+                        <a href="calisma-alanlarimiz.html">ÇALIŞMA ALANLARIMIZ</a>
+                        <ul class="dropdown">
+                            <li><a href="ceza-hukuku.html">Ceza Hukuku</a></li>
+                            <li><a href="idare-hukuku.html">İdare Hukuku</a></li>
+                            <li><a href="ozel-hukuk.html">Özel Hukuk</a></li>
+                            <li><a href="saglik-hukuku.html">Sağlık Hukuku</a></li>
+                            <li><a href="yabancilar-hukuku.html">Yabancılar Hukuku</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+                    <li><a href="iletisim.html">İLETİŞİM</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -128,7 +171,14 @@
     </footer>
 
     <script>
-        // Yükleme animasyonu ile ilgili script kaldırıldı
+        document.querySelector('.menu-button').addEventListener('click', function() {
+            const menuContent = document.querySelector('.menu-content ul');
+            if (menuContent.style.display === 'flex') {
+                menuContent.style.display = 'none';
+            } else {
+                menuContent.style.display = 'flex';
+            }
+        });
     </script>
 </body>
 </html>
