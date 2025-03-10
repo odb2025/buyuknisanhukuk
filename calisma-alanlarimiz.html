@@ -90,12 +90,15 @@
             font-family: 'Celestia BC', sans-serif;
         }
         .dropdown {
-            background: #083224; /* Çalışma Alanlarımız dropdown menüsü tamamen görünür */
+            background: #083224;
             position: absolute;
-            display: none;
+            display: block; /* Dropdown menüsünü görünür hale getirdik */
             list-style: none;
             padding: 10px;
             font-family: 'Celestia BC', sans-serif;
+            left: 50%; /* Sayfanın ortasına konumlandırdık */
+            bottom: 10px; /* Sayfanın en altına konumlandırdık */
+            transform: translateX(-50%);
         }
         .dropdown a {
             background: #083224;
@@ -106,7 +109,7 @@
             font-family: 'Celestia BC', sans-serif;
         }
         .dropdown a:hover {
-            background: #083224;
+            background: #0a4a2a;
         }  
     </style>
 </head>
