@@ -78,31 +78,38 @@
         }
         .contact-form {
             position: absolute;
-            left: 5%; /* Formu biraz sola kaydırdık */
-            bottom: 10%;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 30px; /* Formu büyütmek için padding değerini artırdık */
-            border-radius: 8px;
-            width: 600px; /* Formu genişletmek için genişlik değerini artırdık */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .contact-form h2 {
-            margin-top: 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 15px;
             margin: 10px 0;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .contact-form button {
             background-color: #083224;
             color: white;
-            padding: 10px 15px;
+            padding: 15px;
             font-size: 16px;
-            border: 1px solid black; /* Added black border */
+            border: 1px solid black;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
         }
         .contact-form button:hover {
             background-color: #0a4a2a;
