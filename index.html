@@ -98,17 +98,9 @@
         .dropdown a:hover {
             background: #083224;
         }  
-        .translate-widget {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            transform: scale(0.8); /* Reduce the size of the widget */
-            transform-origin: top right; /* Ensure the widget scales from the top right corner */
-        }
     </style>
 </head>
-<body></body>
+<body>
     <!-- Yükleme animasyonu kaldırıldı -->
 
     <header>
@@ -131,20 +123,12 @@
         </nav>
     </header>
 
-    <div class="translate-widget">
-        <div id="google_translate_element"></div>
-    </div>
-
     <footer>
         <p>&copy; 2025 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
     </footer>
 
     <script>
         // Yükleme animasyonu ile ilgili script kaldırıldı
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'tr'}, 'google_translate_element');
-        }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
