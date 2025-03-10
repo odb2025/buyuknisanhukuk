@@ -13,6 +13,8 @@
             background-repeat: no-repeat;
             position: relative;
             height: 100vh;
+            opacity: 0; /* Başlangıçta görünmez */
+            transition: opacity 1s ease-in-out; /* Solma efekti */
         }
         header {
             background: #083224;
@@ -128,7 +130,10 @@
     </footer>
 
     <script>
-        // Yükleme animasyonu ile ilgili script kaldırıldı
+        // Sayfa yüklendiğinde solma efektini uygula
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+        });
     </script>
 </body>
 </html>
