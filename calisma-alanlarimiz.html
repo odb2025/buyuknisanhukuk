@@ -99,33 +99,9 @@
         .dropdown a:hover {
             background: #083224;
         }  
-        .loading {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .loading img {
-            width: 100px;
-            height: 100px;
-        }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                document.querySelector(".loading").style.display = "none";
-            }, 2000); // 2 seconds
-        });
-    </script>
 </head>
 <body>
-    <div class="loading">
-        <img src="loading.gif" alt="Loading...">
-    </div>
     <header>
         <nav>
             <ul>
