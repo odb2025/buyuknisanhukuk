@@ -212,7 +212,7 @@ footer {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    animation: spin 5s linear infinite; /* Animasyon süresini 5 saniye olarak ayarladık */
+    animation: spin 3s linear infinite; /* Animasyon süresini 3 saniye olarak ayarladık */
 }
 
 @keyframes spin {
