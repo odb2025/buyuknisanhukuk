@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
     <style>
         body {
             background-image: url('giris.png');
@@ -104,6 +105,7 @@
     <div id="loader">
         <div class="spinner"></div>
     </div>
+    <div id="loading" class="loading-spinner"></div>
 
     <header>
         <nav>
@@ -135,6 +137,14 @@
             setTimeout(function() {
                 document.getElementById('loader').style.display = 'none';
             }, 2000); // Yükleme animasyonunu en az 2 saniye göster
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var loading = document.getElementById("loading");
+            // Simulate loading process
+            setTimeout(function() {
+                loading.style.display = "none";
+            }, 3000); // 3 seconds
         });
     </script>
 </body>
