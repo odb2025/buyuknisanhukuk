@@ -6,7 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loading.css">
     <style>
+        @font-face {
+            font-family: 'Celestia BC';
+            src: url('path/to/celestia-bc.woff2') format('woff2'), /* Update with the correct path */
+                 url('path/to/celestia-bc.woff') format('woff'); /* Update with the correct path */
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'Celestia BC', sans-serif;
             background-image: url('giris.png');
             background-size: cover;
             background-position: center;
@@ -19,6 +27,7 @@
             padding: 10px 0;
             text-align: center;
             position: relative;
+            font-family: 'Celestia BC', sans-serif;
         }
         header .logo {
             position: relative;
@@ -33,6 +42,7 @@
             list-style: none;
             display: flex;
             justify-content: center;
+            font-family: 'Celestia BC', sans-serif;
         }
         header nav ul li {
             margin: 0 15px;
@@ -43,6 +53,7 @@
             font-size: 25px;
             font-weight: bold;
             transition: all 0.3s ease-in-out;
+            font-family: 'Celestia BC', sans-serif;
         }
         header nav ul li a:hover {
             transform: scale(1.1);
@@ -58,6 +69,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            font-family: 'Celestia BC', sans-serif;
         }
         .services ul {
             list-style: none;
@@ -75,6 +87,7 @@
             font-size: 18px;
             border-radius: 8px;
             transition: all 0.3s ease-in-out;
+            font-family: 'Celestia BC', sans-serif;
         }
         .services a:hover {
             background: #0a4a2a;
@@ -87,6 +100,7 @@
             padding: 1px 0;
             text-align: center;
             font-size: 10px;
+            font-family: 'Celestia BC', sans-serif;
         }
         .dropdown {
             background: #083224; /* Çalışma Alanlarımız dropdown menüsü tamamen görünür */
@@ -94,6 +108,7 @@
             display: none;
             list-style: none;
             padding: 10px;
+            font-family: 'Celestia BC', sans-serif;
         }
         .dropdown a {
             background: #083224;
@@ -101,6 +116,7 @@
             padding: 10px;
             text-decoration: none;
             color: white;
+            font-family: 'Celestia BC', sans-serif;
         }
         .dropdown a:hover {
             background: #083224;
