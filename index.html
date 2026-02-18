@@ -1,118 +1,101 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0000e9; -webkit-text-stroke: #0000e9}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0000e9; -webkit-text-stroke: #0000e9; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"> <title>Büyüknişan Hukuk | Bakım Aşamasındayız</title>
+    <style>
+        /* Sitenizin mevcut özel yazı tipi tanımlaması */
+        @font-face {
+            font-family: 'Celestia BC';
+            src: url('path/to/celestia-bc.woff2') format('woff2'),
+                 url('path/to/celestia-bc.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Celestia BC', sans-serif;
+            background-image: url('giris.png'); /* Sizin arka plan görseliniz */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Arka plan görselinin üzerine yazının okunabilmesi için sitenizin ana yeşil renginde şeffaf bir katman eklendi */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(8, 50, 36, 0.85); /* #083224 renginin şeffaf hali */
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            padding: 40px;
+            background: #083224; /* Sitenizin ana yeşil tonu */
+            border: 2px solid #0a4a2a; /* Hover/Açık yeşil tonunuz */
+            border-radius: 12px;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .line {
+            width: 60px;
+            height: 3px;
+            background-color: white;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .contact {
+            margin-top: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .contact a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .contact a:hover {
+            color: #0a4a2a; /* Hover efekti için sizin kodunuzdaki yeşil */
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html">&lt;!DOCTYPE html&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html">&lt;html lang="tr"&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html">&lt;head&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">    </span>&lt;meta name="robots" content="noindex, nofollow"&gt; &lt;title&gt;Büyüknişan Hukuk | Bakım Aşamasındayız&lt;/title&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">    </span>&lt;style&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>/* Sitenizin mevcut özel yazı tipi tanımlaması */</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>@font-face {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>font-family: 'Celestia BC';</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>src: url('path/to/celestia-bc.woff2') format('woff2'),</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">                 </span>url('path/to/celestia-bc.woff') format('woff');</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>font-weight: normal;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>font-style: normal;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"></a></span><br></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>body {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>margin: 0;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>padding: 0;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>display: flex;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>justify-content: center;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>align-items: center;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>height: 100vh;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>font-family: 'Celestia BC', sans-serif;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>background-image: url('giris.png'); /* Sizin arka plan görseliniz */</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>background-size: cover;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>background-position: center;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>color: white;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>text-align: center;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"></a></span><br></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>/* Arka plan görselinin üzerine yazının okunabilmesi için sitenizin ana yeşil renginde şeffaf bir katman eklendi */</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>.overlay {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>position: absolute;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>top: 0; left: 0; right: 0; bottom: 0;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>background-color: rgba(8, 50, 36, 0.85); /* #083224 renginin şeffaf hali */</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>z-index: 1;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"></a></span><br></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>.container {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>position: relative;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>z-index: 2;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>padding: 40px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>background: #083224; /* Sitenizin ana yeşil tonu */</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>border: 2px solid #0a4a2a; /* Hover/Açık yeşil tonunuz */</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>border-radius: 12px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>max-width: 600px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 30px rgba(0,0,0,0.5);</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>margin: 20px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"></a></span><br></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>h1 {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>font-size: 2.5rem;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>letter-spacing: 2px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"></a></span><br></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>p {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>line-height: 1.5;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"></a></span><br></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>.line {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>width: 60px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>height: 3px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>background-color: white;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>margin: 20px auto;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>border-radius: 2px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"></a></span><br></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>.contact {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>margin-top: 30px;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>font-size: 1.1rem;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span></a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>.contact a {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>color: white;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>text-decoration: none;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>transition: all 0.3s ease-in-out;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p2"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"></a></span><br></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>.contact a:hover {</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>color: #0a4a2a; /* Hover efekti için sizin kodunuzdaki yeşil */</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>}</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">    </span>&lt;/style&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html">&lt;/head&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html">&lt;body&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">    </span>&lt;div class="overlay"&gt;&lt;/div&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>&lt;h1&gt;BÜYÜKNİŞAN HUKUK&lt;/h1&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>&lt;div class="line"&gt;&lt;/div&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>&lt;p&gt;Web sitemiz sizlere daha iyi hizmet verebilmek adına güncellenmektedir.&lt;/p&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>&lt;p&gt;Çok yakında yeni yüzümüzle buradayız.&lt;/p&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>&lt;div class="contact"&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>İletişim için: &lt;br&gt;&lt;br&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">            </span>&lt;a href="mailto:info@buyuknisanhukuk.com"&gt;info@buyuknisanhukuk.com&lt;/a&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">        </span>&lt;/div&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html"><span class="Apple-converted-space">    </span>&lt;/div&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html">&lt;/body&gt;</a></span></p>
-<p class="p1"><span class="s1"><a href="file:///Users/ozgundostbuyuknisan/Desktop/buyuknisanhukuk/buyuknisanhukuk/index.html">&lt;/html&gt;</a></span></p>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>BÜYÜKNİŞAN HUKUK</h1>
+        <div class="line"></div>
+        <p>Web sitemiz sizlere daha iyi hizmet verebilmek adına güncellenmektedir.</p>
+        <p>Çok yakında yeni yüzümüzle buradayız.</p>
+        <div class="contact">
+            İletişim için: <br><br>
+            <a href="mailto:info@buyuknisanhukuk.com">info@buyuknisanhukuk.com</a>
+        </div>
+    </div>
 </body>
 </html>
