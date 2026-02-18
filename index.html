@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Büyüknisan Hukuk Bürosu | İstanbul | Profesyonel Hukuki Danışmanlık</title>
+    <title>Büyüknisan Hukuk Bürosu | İstanbul</title>
+    
+    <meta name="robots" content="noindex, nofollow">
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
@@ -28,7 +30,7 @@
             overflow-x: hidden;
         }
 
-        /* --- HEADER --- */
+        /* --- NAVIGASYON --- */
         header {
             background: rgba(255, 255, 255, 0.98);
             padding: 25px 8%;
@@ -56,42 +58,42 @@
         /* --- HERO --- */
         .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('giris.png'), var(--ana-yesil); background-size: cover; background-position: center; }
 
+        /* --- HAKKIMIZDA (KURUMSAL) --- */
+        .hakkimizda { padding: 120px 8%; background-color: var(--beyaz); text-align: center; }
+        .hakkimizda-metin { max-width: 900px; margin: 0 auto; font-size: 1.2rem; color: #444; font-style: italic; }
+
         /* --- UZMANLIK ALANLARI --- */
-        .alanlar { padding: 140px 8% 80px; background-color: var(--acik-gri); text-align: center; }
-        .section-title { font-family: 'Cinzel', serif; font-size: 2.5rem; color: var(--ana-yesil); margin-bottom: 80px; position: relative; }
+        .alanlar { padding: 120px 8%; background-color: var(--acik-gri); text-align: center; }
+        .section-title { font-family: 'Cinzel', serif; font-size: 2.5rem; color: var(--ana-yesil); margin-bottom: 70px; position: relative; }
         .section-title::after { content: ''; width: 60px; height: 2px; background: var(--altin); position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); }
 
-        .kart-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1400px; margin: 0 auto; }
-        .kart { background: var(--beyaz); padding: 50px 40px; width: 380px; border-top: 6px solid var(--ana-yesil); transition: 0.4s; text-align: left; }
-        .kart:hover { transform: translateY(-10px); border-top-color: var(--altin); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
-        .kart h3 { font-family: 'Cinzel', serif; color: var(--ana-yesil); margin-bottom: 25px; font-size: 1.4rem; }
+        .kart-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; max-width: 1400px; margin: 0 auto; }
+        .kart { background: var(--beyaz); padding: 50px 40px; width: 380px; border-top: 5px solid var(--ana-yesil); transition: 0.4s; text-align: left; }
+        .kart:hover { transform: translateY(-10px); border-top-color: var(--altin); box-shadow: 0 15px 35px rgba(0,0,0,0.06); }
+        .kart h3 { font-family: 'Cinzel', serif; color: var(--ana-yesil); margin-bottom: 20px; font-size: 1.4rem; }
 
-        /* --- SSS BÖLÜMÜ --- */
+        /* --- SSS --- */
         .sss-section { padding: 100px 8%; background-color: var(--beyaz); }
         .sss-container { max-width: 900px; margin: 0 auto; }
         .sss-item { border-bottom: 1px solid #eee; padding: 20px 0; }
         .sss-soru { width: 100%; text-align: left; background: none; border: none; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--ana-yesil); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         .sss-cevap { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; font-size: 1rem; color: #555; padding-top: 0; }
         .sss-item.active .sss-cevap { max-height: 500px; padding-top: 15px; }
-        .sss-soru::after { content: '+'; font-size: 1.5rem; color: var(--altin); }
+        .sss-soru::after { content: '+'; color: var(--altin); }
         .sss-item.active .sss-soru::after { content: '−'; }
 
-        /* --- CTA BUTON --- */
-        .cta-section { background-color: var(--acik-gri); padding: 80px 0 120px; text-align: center; }
-        .btn-iletisim { font-family: 'Cinzel', serif; padding: 22px 70px; background-color: var(--ana-yesil); color: var(--altin); text-decoration: none; font-weight: bold; font-size: 1rem; letter-spacing: 2px; transition: 0.4s; display: inline-block; border: 1px solid var(--ana-yesil); animation: pulse-animation 2s infinite; }
-        .btn-iletisim:hover { background-color: var(--beyaz); color: var(--ana-yesil); border-color: var(--ana-yesil); }
+        /* --- ILETIŞIM BÖLÜMÜ --- */
+        .iletisim-detay { padding: 100px 8%; background-color: var(--acik-gri); text-align: center; }
+        .iletisim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto; }
+        .iletisim-box h4 { font-family: 'Cinzel', serif; color: var(--ana-yesil); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .iletisim-box p { font-size: 1.1rem; color: #555; }
 
-        /* --- ÇEREZ BİLDİRİMİ --- */
-        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(8, 50, 36, 0.95); color: var(--beyaz); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; z-index: 2000; font-size: 14px; border-top: 2px solid var(--altin); display: none; }
-        .cookie-btns { display: flex; gap: 15px; }
-        .cookie-btn { padding: 8px 20px; border: none; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        .accept-btn { background: var(--altin); color: var(--ana-yesil); }
-        .kvkk-link { color: var(--altin); text-decoration: underline; cursor: pointer; }
-
-        /* --- KVKK MODAL --- */
+        /* --- ÇEREZ & KVKK --- */
+        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(8, 50, 36, 0.98); color: var(--beyaz); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; z-index: 2000; font-size: 14px; border-top: 2px solid var(--altin); display: none; }
+        .cookie-btn { padding: 8px 20px; border: none; cursor: pointer; font-weight: bold; background: var(--altin); color: var(--ana-yesil); }
         #kvkk-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; display: none; justify-content: center; align-items: center; padding: 20px; }
         .modal-content { background: var(--beyaz); padding: 40px; border-radius: 5px; max-width: 800px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; }
-        .close-modal { position: absolute; top: 20px; right: 20px; font-size: 24px; cursor: pointer; color: var(--ana-yesil); }
+        .close-modal { position: absolute; top: 20px; right: 20px; font-size: 24px; cursor: pointer; }
 
         /* --- FLOAT BUTTONS --- */
         .float-btn { position: fixed; width: 60px; height: 60px; right: 40px; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 100; display: flex; justify-content: center; align-items: center; text-decoration: none; transition: 0.3s; }
@@ -100,11 +102,10 @@
 
         /* --- FOOTER --- */
         footer { background: var(--ana-yesil); color: var(--beyaz); padding: 100px 8% 40px; text-align: center; }
-        .footer-logo { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--altin); margin-bottom: 15px; letter-spacing: 3px; }
+        .footer-logo { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--altin); letter-spacing: 3px; }
         .copyright { margin-top: 80px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; opacity: 0.5; }
 
-        @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(10, 74, 42, 0.4); } 100% { box-shadow: 0 0 0 20px rgba(10, 74, 42, 0); } }
-        @media (max-width: 768px) { #cookie-banner { flex-direction: column; text-align: center; gap: 15px; } header { flex-direction: column; padding: 20px; } nav ul { margin-top: 20px; } .hero { height: 60vh; } .kart { width: 100%; } }
+        @media (max-width: 768px) { header { flex-direction: column; padding: 20px; } nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; } .hero { height: 60vh; } }
     </style>
 </head>
 <body>
@@ -116,8 +117,8 @@
         </a>
         <nav>
             <ul>
-                <li><a href="#anasayfa">Anasayfa</a></li>
-                <li><a href="#calisma-alanlari">Uzmanlıklar</a></li>
+                <li><a href="#kurumsal">Kurumsal</a></li>
+                <li><a href="#uzmanliklar">Uzmanlıklar</a></li>
                 <li><a href="#sss">S.S.S.</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
                 <li><a href="en.html" class="lang-btn">EN</a></li>
@@ -127,77 +128,65 @@
 
     <section id="anasayfa" class="hero"></section>
 
-    <section id="calisma-alanlari" class="alanlar">
+    <section id="kurumsal" class="hakkimizda">
+        <h2 class="section-title">Kurumsal Profilimiz</h2>
+        <p class="hakkimizda-metin">
+            "Büyüknisan Hukuk Bürosu, hukukun evrensel ilkeleri ışığında, müvekkillerine stratejik ve çözüm odaklı danışmanlık hizmeti sunan İstanbul merkezli bir hukuk ofisidir. Özellikle Vatandaşlık ve Yabancılar Hukuku ile Sağlık Hukuku gibi dinamik alanlarda akademik derinlik ve saha tecrübesini harmanlayarak, her müvekkilin hukuki ihtiyacına özel, şeffaf ve prestijli bir temsil süreci yürütmekteyiz."
+        </p>
+    </section>
+
+    <section id="uzmanliklar" class="alanlar">
         <h2 class="section-title">Uzmanlık Alanlarımız</h2>
         <div class="kart-container">
-            
-            <div class="kart">
-                <h3>Vatandaşlık ve Yabancılar Hukuku</h3>
-                <p>İkamet ve çalışma izinlerine müteallik idari süreçlerin takibi, Türk vatandaşlığının iktisabı, sınır dışı (deport) kararlarına yönelik iptal davaları ve idari gözetim süreçlerinin yönetimi.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Sağlık ve Tıp Hukuku</h3>
-                <p>Tıbbi malpraktis iddialarından neşet eden uyuşmazlıklar, hasta ve hekim haklarının korunması ile sağlık mevzuatına uyum süreçlerinde profesyonel hukuki danışmanlık.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Borçlar ve Tazminat Hukuku</h3>
-                <p>Haksız fiil, iş ve trafik kazaları ile akdi yükümlülüklerin ihlalinden kaynaklanan maddi ve manevi tazminat taleplerinin yargısal merciler nezdinde temsili ve hak takibi.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Ceza Hukuku ve Müdafiilik</h3>
-                <p>Soruşturma ve kovuşturma safhalarında şüpheli, sanık müdafiiliği veya müşteki vekilliği kapsamında, adil yargılanma hakkı çerçevesinde stratejik savunma ve temsil faaliyeti.</p>
-            </div>
-
-            <div class="kart">
-                <h3>İdare Hukuku ve Dava Takibi</h3>
-                <p>İdari işlemlerin iptali, tam yargı davaları ve idari yaptırımlara karşı yürütülen hukuki itiraz süreçlerinin, idari yargı mercileri nezdinde profesyonelce yönetilmesi.</p>
-            </div>
-
-            <div class="kart">
-                <h3>İcra ve İflas Hukuku</h3>
-                <p>Alacak takibi, ilamlı ve ilamsız icra süreçleri, haciz işlemleri ile konkordato ve iflas süreçlerinin yönetimi kapsamında kapsamlı icra hukuku hizmetleri.</p>
-            </div>
-
+            <div class="kart"><h3>Vatandaşlık ve Yabancılar Hukuku</h3><p>Vatandaşlık iktisabı, ikamet ve çalışma izinleri ile deport süreçlerinin yönetimi.</p></div>
+            <div class="kart"><h3>Sağlık ve Tıp Hukuku</h3><p>Malpraktis davaları ve hasta hakları uyuşmazlıklarında stratejik danışmanlık.</p></div>
+            <div class="kart"><h3>Borçlar ve Tazminat Hukuku</h3><p>Maddi ve manevi tazminat taleplerinin yargısal süreçleri ve hak takibi.</p></div>
+            <div class="kart"><h3>Ceza Hukuku ve Müdafiilik</h3><p>Soruşturma ve kovuşturma safhalarında profesyonel hukuki temsil.</p></div>
+            <div class="kart"><h3>İdare Hukuku</h3><p>İdari işlemlerin iptali ve tam yargı davalarının takibi.</p></div>
+            <div class="kart"><h3>İcra ve İflas Hukuku</h3><p>Alacak takibi ve icra-iflas süreçlerinin profesyonel yönetimi.</p></div>
         </div>
     </section>
 
     <section id="sss" class="sss-section">
         <h2 class="section-title" style="text-align: center;">Sıkça Sorulan Sorular</h2>
         <div class="sss-container">
-            <div class="sss-item"><button class="sss-soru">Türk vatandaşlığı başvurusu ne kadar sürede sonuçlanır?</button><div class="sss-cevap">Usulüne uygun başvurular genellikle 6 ila 18 ay içerisinde nihayete ermektedir.</div></div>
-            <div class="sss-item"><button class="sss-soru">İkamet izni reddedilen yabancılar için hukuki yollar nelerdir?</button><div class="sss-cevap">İptal davası açma hakkına haizdir.</div></div>
+            <div class="sss-item"><button class="sss-soru">Türk vatandaşlığı süreci ne kadar sürer?</button><div class="sss-cevap">Ortalama 6-18 ay arasında nihayete ermektedir.</div></div>
         </div>
     </section>
 
-    <div class="cta-section">
-        <a href="#iletisim" class="btn-iletisim">HUKUKİ DANIŞMANLIK İÇİN BAŞVURUN</a>
-    </div>
+    <section id="iletisim" class="iletisim-detay">
+        <h2 class="section-title">İletişim Kanallarımız</h2>
+        <div class="iletisim-grid">
+            <div class="iletisim-box">
+                <h4>Ofis Adresimiz</h4>
+                <p>İstanbul, Türkiye<br>(Tam adresinizi buraya ekleyebilirsiniz)</p>
+            </div>
+            <div class="iletisim-box">
+                <h4>Elektronik Posta</h4>
+                <p>info@buyuknisanhukuk.com</p>
+            </div>
+            <div class="iletisim-box">
+                <h4>Hızlı İletişim</h4>
+                <p>WhatsApp ve Telegram üzerinden<br>7/24 başvuru yapabilirsiniz.</p>
+            </div>
+        </div>
+    </section>
 
     <div id="cookie-banner">
-        <span>Sitemizde size en iyi deneyimi sunabilmek için çerezler kullanılmaktadır. Detaylı bilgi için <span class="kvkk-link" onclick="openKVKK()">KVKK Aydınlatma Metni</span>'ni inceleyebilirsiniz.</span>
-        <div class="cookie-btns"><button class="cookie-btn accept-btn" onclick="acceptCookies()">Kabul Ediyorum</button></div>
+        <span>Deneyiminiz için çerezler kullanmaktayız. <span onclick="openKVKK()" style="text-decoration:underline; cursor:pointer;">KVKK Metni</span></span>
+        <button class="cookie-btn" onclick="acceptCookies()">Kabul Et</button>
     </div>
 
     <div id="kvkk-modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeKVKK()">&times;</span>
             <h2 style="font-family: 'Cinzel', serif; color: var(--ana-yesil); margin-bottom: 20px;">KVKK AYDINLATMA METNİ</h2>
-            <p style="font-size: 0.9rem; text-align: justify;">
-                <strong>Büyüknisan Hukuk Bürosu</strong> olarak, kişisel verilerinizin güvenliğine önem veriyoruz. İletişim butonları üzerinden tarafımıza ulaştığınızda paylaşılan verileriniz sadece danışmanlık taleplerinizin karşılanması amacıyla işlenmektedir.
-            </p>
+            <p style="font-size: 0.9rem; text-align: justify;">Büyüknisan Hukuk Bürosu olarak verilerinizin güvenliğine önem veriyoruz. İletişim butonları üzerinden tarafımıza ulaştığınızda paylaşılan verileriniz sadece danışmanlık taleplerinizin karşılanması amacıyla işlenmektedir.</p>
         </div>
     </div>
 
-    <a href="https://t.me/" class="float-btn tg-float" target="_blank">
-        <svg width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM12.166 5.023c-.11-.46-.36-.59-.75-.59-.25 0-.55.08-.85.2l-6.15 2.53c-.35.15-.55.35-.55.6s.2.45.55.6l1.65.65c.3.1.55 0 .75-.2l3.4-2.35c.15-.1.3 0 .2.15l-2.65 2.5c-.2.2-.2.45 0 .65l2.1 1.75c.35.3.7.45 1.05.45.4 0 .75-.25.85-.75l1.1-5.3c.1-.45-.1-.85-.35-.95z"/></svg>
-    </a>
-
-    <a href="https://wa.me/90XXXXXXXXXX?text=Merhaba,%20hukuki%20danışmanlık%20almak%20istiyorum." class="float-btn wp-float" target="_blank">
-        <svg width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-    </a>
+    <a href="https://t.me/" class="float-btn tg-float" target="_blank"><svg width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM12.166 5.023c-.11-.46-.36-.59-.75-.59-.25 0-.55.08-.85.2l-6.15 2.53c-.35.15-.55.35-.55.6s.2.45.55.6l1.65.65c.3.1.55 0 .75-.2l3.4-2.35c.15-.1.3 0 .2.15l-2.65 2.5c-.2.2-.2.45 0 .65l2.1 1.75c.35.3.7.45 1.05.45.4 0 .75-.25.85-.75l1.1-5.3c.1-.45-.1-.85-.35-.95z"/></svg></a>
+    <a href="https://wa.me/90XXXXXXXXXX?text=Merhaba,%20hukuki%20danışmanlık%20almak%20istiyorum." class="float-btn wp-float" target="_blank"><svg width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg></a>
 
     <footer>
         <div class="footer-logo">BÜYÜKNİSAN</div>
@@ -205,14 +194,11 @@
     </footer>
 
     <script>
-        document.querySelectorAll('.sss-soru').forEach(button => {
-            button.addEventListener('click', () => { button.parentElement.classList.toggle('active'); });
-        });
+        document.querySelectorAll('.sss-soru').forEach(button => { button.addEventListener('click', () => { button.parentElement.classList.toggle('active'); }); });
         window.onload = function() { if(!localStorage.getItem('cookiesAccepted')) { document.getElementById('cookie-banner').style.display = 'flex'; } };
         function acceptCookies() { localStorage.setItem('cookiesAccepted', 'true'); document.getElementById('cookie-banner').style.display = 'none'; }
         function openKVKK() { document.getElementById('kvkk-modal').style.display = 'flex'; }
         function closeKVKK() { document.getElementById('kvkk-modal').style.display = 'none'; }
     </script>
-
 </body>
 </html>
