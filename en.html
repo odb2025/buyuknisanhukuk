@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Büyüknisan Law Firm | Istanbul | High-Level Legal Counsel</title>
+    <title>Büyüknisan Law Firm | Istanbul | Professional Legal Counsel</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
@@ -28,7 +28,7 @@
             overflow-x: hidden;
         }
 
-        /* --- NAVIGATION --- */
+        /* --- NAVIGATION & LOGO --- */
         header {
             background: rgba(255, 255, 255, 0.98);
             padding: 25px 8%;
@@ -66,30 +66,32 @@
         .card:hover { transform: translateY(-12px); border-top-color: var(--gold); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
         .card h3 { font-family: 'Cinzel', serif; color: var(--primary-green); margin-bottom: 25px; font-size: 1.4rem; }
 
-        /* --- FAQ (ACCORDION) --- */
+        /* --- FAQ --- */
         .faq-section { padding: 100px 8%; background-color: var(--white); }
-        .faq-container { max-width: 900px; margin: 0 auto; text-align: left; }
-        
+        .faq-container { max-width: 900px; margin: 0 auto; }
         .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; }
-        .faq-question { 
-            width: 100%; text-align: left; background: none; border: none; 
-            font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;
-            color: var(--primary-green); cursor: pointer; display: flex; justify-content: space-between; align-items: center;
-        }
-        .faq-answer { 
-            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; 
-            font-size: 1rem; color: #555; padding-top: 0; text-align: justify;
-        }
+        .faq-question { width: 100%; text-align: left; background: none; border: none; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--primary-green); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; font-size: 1rem; color: #555; padding-top: 0; }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 15px; }
         .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--gold); }
         .faq-item.active .faq-question::after { content: '−'; }
 
-        /* --- CTA BUTTON --- */
+        /* --- CTA --- */
         .cta-section { background-color: var(--light-grey); padding: 80px 0 120px; text-align: center; }
         .btn-enquire { font-family: 'Cinzel', serif; padding: 22px 70px; background-color: var(--primary-green); color: var(--gold); text-decoration: none; font-weight: bold; font-size: 1rem; letter-spacing: 2px; transition: 0.4s; display: inline-block; border: 1px solid var(--primary-green); animation: pulse-animation 2s infinite; }
-        .btn-enquire:hover { background-color: var(--white); color: var(--primary-green); border-color: var(--primary-green); }
 
-        /* --- FLOATING BUTTONS --- */
+        /* --- PRIVACY & COOKIES --- */
+        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(8, 50, 36, 0.95); color: var(--white); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; z-index: 2000; font-size: 14px; border-top: 2px solid var(--gold); display: none; }
+        .cookie-btns { display: flex; gap: 15px; }
+        .cookie-btn { padding: 8px 20px; border: none; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .accept-btn { background: var(--gold); color: var(--primary-green); }
+        .legal-link { color: var(--gold); text-decoration: underline; cursor: pointer; }
+
+        #privacy-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; display: none; justify-content: center; align-items: center; padding: 20px; }
+        .modal-content { background: var(--white); padding: 40px; border-radius: 5px; max-width: 800px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; }
+        .close-modal { position: absolute; top: 20px; right: 20px; font-size: 24px; cursor: pointer; color: var(--primary-green); }
+
+        /* --- FLOAT BUTTONS --- */
         .float-btn { position: fixed; width: 60px; height: 60px; right: 40px; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 100; display: flex; justify-content: center; align-items: center; text-decoration: none; transition: 0.3s; }
         .wp-float { bottom: 40px; background-color: var(--wp-green); }
         .tg-float { bottom: 115px; background-color: var(--tg-blue); }
@@ -100,20 +102,20 @@
         .copyright { margin-top: 80px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; opacity: 0.5; }
 
         @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0px rgba(10, 74, 42, 0.4); } 100% { box-shadow: 0 0 0 20px rgba(10, 74, 42, 0); } }
-        @media (max-width: 768px) { header { flex-direction: column; padding: 20px; } nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; } .hero { height: 60vh; } .card { width: 100%; } .float-btn { width: 50px; height: 50px; right: 20px; } .wp-float { bottom: 20px; } .tg-float { bottom: 85px; } }
+        @media (max-width: 768px) { #cookie-banner { flex-direction: column; text-align: center; gap: 15px; } header { flex-direction: column; padding: 20px; } nav ul { margin-top: 20px; } .hero { height: 60vh; } .card { width: 100%; } }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="en.html" class="logo-container">
+        <a href="#" class="logo-container">
             <span class="logo-text">BÜYÜKNİSAN</span>
             <span class="logo-subtext">Law Firm</span>
         </a>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#expertise">Practice Areas</a></li>
+                <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="index.html" class="lang-btn">TR</a></li>
@@ -126,66 +128,65 @@
     <section id="expertise" class="expertise-section">
         <h2 class="section-title">Fields of Expertise</h2>
         <div class="card-container">
+            
             <div class="card">
                 <h3>Immigration & Nationality Law</h3>
-                <p>Expert legal counsel regarding residence and work permit applications, naturalisation proceedings, and judicial representation in deportation disputes.</p>
+                <p>Strategic legal counsel regarding residence and work permit applications, naturalisation proceedings, and judicial representation in deportation disputes.</p>
             </div>
+
             <div class="card">
                 <h3>Healthcare & Medical Law</h3>
-                <p>Strategic advocacy in clinical negligence claims, the protection of patient rights, and regulatory compliance within the medical sector.</p>
+                <p>Strategic advocacy in clinical negligence (malpractice) claims, the protection of patient rights, and regulatory compliance within the medical sector.</p>
             </div>
+
             <div class="card">
                 <h3>Tort Law & Damages</h3>
                 <p>Specialised litigation regarding material and non-pecuniary compensation claims arising from tortious liability and industrial accidents.</p>
             </div>
+
             <div class="card">
                 <h3>Criminal Defence & Advocacy</h3>
-                <p>Comprehensive legal representation throughout investigation and trial phases, ensuring rigorous defence of procedural rights.</p>
+                <p>Comprehensive legal representation throughout investigation and trial phases, ensuring the rigorous defence of procedural rights.</p>
             </div>
+
             <div class="card">
                 <h3>Administrative Litigation</h3>
                 <p>Professional legal services concerning the annulment of administrative acts and full remedy actions before Judicial Authorities.</p>
             </div>
+
+            <div class="card">
+                <h3>Execution & Bankruptcy Law</h3>
+                <p>Debt collection, enforcement of court orders, seizure proceedings, and the management of concordat and insolvency processes.</p>
+            </div>
+
         </div>
     </section>
 
     <section id="faq" class="faq-section">
         <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
         <div class="faq-container">
-            
-            <div class="faq-item">
-                <button class="faq-question">What is the expected duration for the acquisition of Turkish citizenship?</button>
-                <div class="faq-answer">
-                    The duration for the acquisition of citizenship varies based on the legal grounds of the application (e.g., investment, marriage, or residency) and administrative workload. Generally, duly submitted applications are concluded within 6 to 18 months.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Which legal remedies are available following the rejection of a residence permit?</button>
-                <div class="faq-answer">
-                    Foreign nationals whose residence permit applications have been rejected reserve the right to initiate an annulment action with a request for a "Stay of Execution" before the Administrative Courts within the statutory periods following notification.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">What is the statute of limitations for medical malpractice claims?</button>
-                <div class="faq-answer">
-                    In claims arising from clinical negligence, the statute of limitations is 2 years from the date the damage and the liable party are discovered, and in any event, 10 years from the date of the occurrence. Different notification periods apply to public healthcare institutions.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Does the firm provide legal consultancy services in foreign languages?</button>
-                <div class="faq-answer">
-                    Yes, our firm provides professional legal consultancy and advocacy services in academic-level English, specifically tailored to managing the nationality and investment proceedings of our international clientele.
-                </div>
-            </div>
-
+            <div class="faq-item"><button class="faq-question">What is the duration for acquiring Turkish citizenship?</button><div class="faq-answer">Generally, duly submitted applications are concluded within 6 to 18 months.</div></div>
+            <div class="faq-item"><button class="faq-question">Legal remedies after residence permit rejection?</button><div class="faq-answer">Applicants reserve the right to initiate an annulment action before Administrative Courts.</div></div>
         </div>
     </section>
 
     <div class="cta-section">
         <a href="#contact" class="btn-enquire">ENQUIRE FOR LEGAL COUNSEL</a>
+    </div>
+
+    <div id="cookie-banner">
+        <span>We use cookies to enhance your experience. For details, please review our <span class="legal-link" onclick="openPrivacy()">Privacy Policy</span>.</span>
+        <div class="cookie-btns"><button class="cookie-btn accept-btn" onclick="acceptCookies()">Accept All</button></div>
+    </div>
+
+    <div id="privacy-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePrivacy()">&times;</span>
+            <h2 style="font-family: 'Cinzel', serif; color: var(--primary-green); margin-bottom: 20px;">PRIVACY POLICY</h2>
+            <p style="font-size: 0.9rem; text-align: justify;">
+                <strong>Büyüknisan Law Firm</strong> is committed to protecting your personal data in accordance with international standards. Data shared via communication channels is processed solely to address your legal enquiries and facilitate professional consultation.
+            </p>
+        </div>
     </div>
 
     <a href="https://t.me/" class="float-btn tg-float" target="_blank">
@@ -198,17 +199,17 @@
 
     <footer>
         <div class="footer-logo">BÜYÜKNİSAN</div>
-        <p>Istanbul, Türkiye | <a href="mailto:info@buyuknisanhukuk.com" style="color:var(--gold); text-decoration:none;">info@buyuknisanhukuk.com</a></p>
         <div class="copyright">© 2026 BÜYÜKNİSAN LAW FIRM. ALL RIGHTS RESERVED.</div>
     </footer>
 
     <script>
         document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                faqItem.classList.toggle('active');
-            });
+            button.addEventListener('click', () => { button.parentElement.classList.toggle('active'); });
         });
+        window.onload = function() { if(!localStorage.getItem('cookiesAccepted')) { document.getElementById('cookie-banner').style.display = 'flex'; } };
+        function acceptCookies() { localStorage.setItem('cookiesAccepted', 'true'); document.getElementById('cookie-banner').style.display = 'none'; }
+        function openPrivacy() { document.getElementById('privacy-modal').style.display = 'flex'; }
+        function closePrivacy() { document.getElementById('privacy-modal').style.display = 'none'; }
     </script>
 
 </body>
