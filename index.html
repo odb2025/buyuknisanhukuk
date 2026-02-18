@@ -9,6 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
+        /* Yazı Tipleri */
         @font-face {
             font-family: 'Celestia BC';
             src: url('path/to/celestia-bc.woff2') format('woff2');
@@ -59,3 +60,9 @@
         }
         nav ul li a::after {
             content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0;
+            background-color: var(--altin); transition: 0.3s;
+        }
+        nav ul li a:hover::after { width: 100%; }
+
+        /* --- HERO BÖLÜMÜ --- */
+        .hero
