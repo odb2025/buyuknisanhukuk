@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Büyüknisan Law Firm | Istanbul | Digital Legal Counsel</title>
+    <title>Büyüknisan Law Firm | Istanbul | Digital Legal Services</title>
     
     <meta name="robots" content="noindex, nofollow">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
@@ -29,7 +30,7 @@
             overflow-x: hidden;
         }
 
-        /* --- HEADER --- */
+        /* --- HEADER & LOGO --- */
         header {
             background: rgba(255, 255, 255, 0.98);
             padding: 15px 5%;
@@ -51,11 +52,11 @@
         .menu-toggle span { width: 25px; height: 2px; background: var(--primary-green); transition: 0.3s; }
 
         nav ul { list-style: none; display: flex; align-items: center; gap: 20px; }
-        nav ul li a { text-decoration: none; color: var(--primary-green); font-weight: bold; font-size: 13px; text-transform: uppercase; }
+        nav ul li a { text-decoration: none; color: var(--primary-green); font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
 
         .lang-btn { border: 1px solid var(--primary-green); padding: 5px 12px; font-size: 11px; text-decoration: none; color: var(--primary-green); font-weight: bold; }
 
-        /* --- HERO (No Image, Fast Loading) --- */
+        /* --- HERO (Pure CSS Gradient) --- */
         .hero { 
             height: 70vh; 
             background: linear-gradient(135deg, #083224 0%, #041a13 100%);
@@ -66,14 +67,14 @@
             color: var(--gold);
             text-align: center;
         }
-        .hero-title { font-family: 'Cinzel'; font-size: 2.5rem; letter-spacing: 5px; opacity: 0.9; padding: 20px; }
+        .hero-title { font-family: 'Cinzel'; font-size: 2.2rem; letter-spacing: 5px; opacity: 0.9; padding: 20px; text-transform: uppercase; }
 
-        /* --- SECTIONS --- */
+        /* --- SECTION STYLES --- */
         .section { padding: 80px 8%; text-align: center; }
         .section-title { font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--primary-green); margin-bottom: 50px; position: relative; }
         .section-title::after { content: ''; width: 40px; height: 2px; background: var(--gold); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
 
-        /* --- CARDS --- */
+        /* --- PRACTICE AREA CARDS --- */
         .card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
         .card { background: var(--white); padding: 40px 30px; border-top: 4px solid var(--primary-green); border-bottom: 1px solid #eee; text-align: left; transition: 0.3s; }
         .card:hover { transform: translateY(-5px); border-top-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
@@ -93,7 +94,7 @@
         .contact-box { padding: 30px; background: var(--light-grey); border-radius: 2px; }
         .contact-box h4 { font-family: 'Cinzel', serif; font-size: 1rem; margin-bottom: 10px; color: var(--primary-green); text-transform: uppercase; }
 
-        /* --- PRIVACY & COOKIES --- */
+        /* --- MODALS & COOKIES --- */
         #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(8, 50, 36, 0.98); color: white; padding: 15px 8%; display: none; justify-content: space-between; align-items: center; z-index: 3000; font-size: 13px; border-top: 2px solid var(--gold); }
         .cookie-btn { padding: 8px 20px; background: var(--gold); color: var(--primary-green); border: none; cursor: pointer; font-weight: bold; }
         #privacy-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 4000; display: none; justify-content: center; align-items: center; padding: 20px; }
@@ -103,12 +104,13 @@
         .float-btns { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
         .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none; font-weight: bold; }
 
+        /* --- MOBILE ADAPTATION --- */
         @media (max-width: 768px) {
             .menu-toggle { display: flex; }
-            nav { position: absolute; top: 100%; left: 0; width: 100%; background: white; display: none; flex-direction: column; padding: 25px; border-top: 1px solid #eee; }
+            nav { position: absolute; top: 100%; left: 0; width: 100%; background: white; display: none; flex-direction: column; padding: 25px; border-top: 1px solid #eee; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
             nav.active { display: flex; }
             nav ul { flex-direction: column; gap: 20px; }
-            .hero-title { font-size: 1.5rem; }
+            .hero-title { font-size: 1.4rem; letter-spacing: 3px; }
             .section { padding: 60px 5%; }
         }
     </style>
@@ -116,15 +118,15 @@
 <body>
 
     <header>
-        <a href="#" class="logo-container">
-            <span class="logo-text">BÜYÜKNİSAN LAW FIRM</span>
+        <a href="en.html" class="logo-container">
+            <span class="logo-text">BÜYÜKNİSAN</span>
             <span class="logo-subtext">Law Firm</span>
         </a>
         <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
         <nav id="nav-list">
             <ul>
                 <li><a href="#corporate">Corporate</a></li>
-                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#expertise">Practice Areas</a></li>
                 <li><a href="#faq">F.A.Q.</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="index.html" class="lang-btn">TR</a></li>
@@ -133,25 +135,25 @@
     </header>
 
     <section class="hero">
-        <h1 class="hero-title">BÜYÜKNİSAN LAW FIRM<br><span style="font-size: 1rem; letter-spacing: 2px;">STRATEGIC LEGAL COUNSEL</span></h1>
+        <h1 class="hero-title">BÜYÜKNİSAN LAW FIRM<br><span style="font-size: 0.9rem; letter-spacing: 2px;">ONLINE AND RAPID LEGAL SOLUTIONS</span></h1>
     </section>
 
     <section id="corporate" class="section">
         <h2 class="section-title">Corporate Profile</h2>
         <p style="max-width: 850px; margin: 0 auto; font-style: italic; color: #444; font-size: 1.1rem;">
-            "Büyüknisan Law Firm is an Istanbul-based practice providing location-independent legal services through advanced digital platforms. We blend academic rigour with strategic legal counsel."
+            "Büyüknisan Law Firm is an Istanbul-based practice committed to addressing the requirements of an increasingly digitalised world. We provide high-prestige legal services through online platforms, ensuring rapid and borderless accessibility for our global clientele."
         </p>
     </section>
 
     <section id="expertise" class="section" style="background: var(--light-grey);">
         <h2 class="section-title">Fields of Expertise</h2>
         <div class="card-container">
-            <div class="card"><h3>Immigration & Nationality</h3><p>Management of naturalisation and residence permit proceedings for global clients.</p></div>
-            <div class="card"><h3>Healthcare & Medical Law</h3><p>Strategic advocacy in clinical negligence and regulatory healthcare compliance.</p></div>
-            <div class="card"><h3>Tort & Damages Law</h3><p>Judicial management of compensation claims arising from tortious liability.</p></div>
-            <div class="card"><h3>Criminal Defence</h3><p>Professional representation and procedural defence throughout trial phases.</p></div>
-            <div class="card"><h3>Administrative Law</h3><p>Legal challenges against administrative acts and full remedy actions.</p></div>
-            <div class="card"><h3>Execution & Bankruptcy</h3><p>Strategic management of debt collection and insolvency proceedings.</p></div>
+            <div class="card"><h3>Immigration & Nationality</h3><p>Remote management of naturalisation, residence permits, and deportation proceedings.</p></div>
+            <div class="card"><h3>Healthcare & Medical Law</h3><p>Academic consultancy regarding clinical negligence (malpractice) and patient rights.</p></div>
+            <div class="card"><h3>Tort & Damages Law</h3><p>Litigation of material and non-pecuniary compensation claims before judicial authorities.</p></div>
+            <div class="card"><h3>Criminal Defence</h3><p>Professional defence services throughout investigation and prosecution phases.</p></div>
+            <div class="card"><h3>Administrative Litigation</h3><p>Legal management of annulment actions and full remedy cases against administrative acts.</p></div>
+            <div class="card"><h3>Execution & Bankruptcy</h3><p>Professional management of debt collection and insolvency proceedings.</p></div>
         </div>
     </section>
 
@@ -159,8 +161,8 @@
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq-container">
             <div class="faq-item">
-                <button class="faq-question">How does the digital consultancy work?</button>
-                <div class="faq-answer">Initial inquiries are followed by secure online consultation appointments scheduled via digital platforms.</div>
+                <button class="faq-question">How does the digital consultancy process begin?</button>
+                <div class="faq-answer">Following your initial enquiry via WhatsApp or Telegram, a secure online consultation appointment is scheduled.</div>
             </div>
         </div>
     </section>
@@ -168,7 +170,7 @@
     <section id="contact" class="section" style="background: var(--light-grey);">
         <h2 class="section-title">Digital Contact</h2>
         <div class="contact-grid">
-            <div class="contact-box"><h4>Digital Service</h4><p>Global accessibility through our online-first legal model.</p></div>
+            <div class="contact-box"><h4>Digital Service</h4><p>Location-independent, global digital consultancy model.</p></div>
             <div class="contact-box"><h4>Corporate E-Mail</h4><p>info@buyuknisanhukuk.com</p></div>
         </div>
     </section>
@@ -181,8 +183,8 @@
     <div id="privacy-modal">
         <div class="modal-content">
             <span style="position:absolute; top:20px; right:20px; cursor:pointer; font-size:24px;" onclick="closePrivacy()">&times;</span>
-            <h2 style="font-family:'Cinzel'; color:var(--primary-green); margin-bottom:20px;">PRIVACY POLICY</h2>
-            <p style="font-size:0.9rem; text-align:justify;">Data shared during digital consultations is processed strictly for legal service requirements.</p>
+            <h2 style="font-family: 'Cinzel'; color: var(--primary-green); margin-bottom: 20px;">PRIVACY POLICY</h2>
+            <p style="font-size: 0.9rem; text-align: justify;">Information shared during digital consultations is processed strictly for the purpose of addressing your legal enquiries and requirements.</p>
         </div>
     </div>
 
@@ -192,7 +194,7 @@
     </div>
 
     <footer>
-        <div style="font-family:'Cinzel'; color:var(--gold); font-size:1.5rem; margin-bottom:10px;">BÜYÜKNİSAN</div>
+        <div style="font-family:'Cinzel'; color:var(--gold); font-size:1.5rem; margin-bottom:10px;">BÜYÜKNİSAN LAW FIRM</div>
         <div style="font-size:0.8rem; opacity:0.6; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;">© 2026 BÜYÜKNİSAN LAW FIRM. ALL RIGHTS RESERVED.</div>
     </footer>
 
