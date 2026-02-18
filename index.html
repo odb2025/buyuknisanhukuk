@@ -6,167 +6,154 @@
     <title>Büyüknisan Hukuk Bürosu | İstanbul</title>
     <meta name="robots" content="noindex, nofollow">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <style>
+        /* --- TEMEL AYARLAR VE RENKLER --- */
         :root {
             --ana-yesil: #083224;
             --acik-yesil: #0a4a2a;
             --altin: #d4af37;
-            --acik-gri: #f8f9fa;
-            --text-koyu: #1a1a1a;
+            --acik-gri: #f4f7f6;
             --beyaz: #ffffff;
+            --text-koyu: #1a1a1a;
         }
 
-        /* Temel Ayarlar */
         * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text-koyu);
+            line-height: 1.6;
             background-color: var(--beyaz);
             overflow-x: hidden;
-        }
-
-        /* Eğer AOS yüklenmezse içeriklerin görünmeme riskine karşı */
-        [data-aos] {
-            pointer-events: none;
-        }
-        .aos-animate {
-            pointer-events: auto;
         }
 
         /* --- NAVIGASYON --- */
         header {
             background: rgba(255, 255, 255, 0.98);
-            padding: 15px 8%;
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             position: fixed; width: 100%; top: 0; z-index: 1000;
         }
 
         .logo { 
-            font-size: 22px; 
+            font-size: 24px; 
             color: var(--ana-yesil); 
             text-decoration: none; 
-            font-weight: 600;
+            font-weight: bold;
             letter-spacing: 1px;
         }
 
-        nav ul { list-style: none; display: flex; align-items: center; }
-        nav ul li { margin-left: 25px; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 30px; }
         nav ul li a { 
             text-decoration: none; color: var(--ana-yesil); font-weight: 500; 
-            font-size: 15px; transition: 0.3s;
+            transition: 0.3s;
         }
         nav ul li a:hover { color: var(--altin); }
 
-        /* --- HERO BÖLÜMÜ --- */
+        /* --- HERO (KARŞILAMA) --- */
         .hero {
-            height: 100vh;
+            height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            /* Arka plan görseli yüklenmezse diye ana yeşil rengi yedek bıraktım */
-            background: linear-gradient(rgba(8, 50, 36, 0.85), rgba(8, 50, 36, 0.85)), url('giris.png'), var(--ana-yesil);
+            background: linear-gradient(rgba(8, 50, 36, 0.8), rgba(8, 50, 36, 0.8)), url('giris.png'), var(--ana-yesil);
             background-size: cover;
             background-position: center;
             color: var(--beyaz);
             padding: 0 20px;
+            margin-top: 60px;
         }
 
-        .hero-content { max-width: 900px; }
-
         .hero-content h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             margin-bottom: 20px;
-            line-height: 1.2;
+            animation: fadeInDown 1.5s ease;
         }
 
         .hero-content p {
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            margin-bottom: 35px;
-            opacity: 0.9;
-            font-weight: 300;
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1.5s ease;
         }
 
-        .btn-glow {
-            padding: 15px 40px;
-            background: var(--altin);
-            color: var(--ana-yesil);
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            display: inline-block;
-            transition: 0.4s;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-glow:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-            background: var(--beyaz);
-        }
-
-        /* --- ÇALIŞMA ALANLARI --- */
+        /* --- FAALİYET ALANLARI (GERİ GELDİ) --- */
         .alanlar { padding: 100px 8%; background-color: var(--acik-gri); }
+        
         .section-title { 
-            text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: var(--ana-yesil);
+            text-align: center; 
+            font-size: clamp(2rem, 4vw, 3rem); 
+            margin-bottom: 60px; 
+            color: var(--ana-yesil);
+            position: relative;
+        }
+        .section-title::after {
+            content: ''; width: 80px; height: 4px; background: var(--altin);
+            position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
         }
 
-        .kart-grid {
+        .kart-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .kart {
             background: var(--beyaz);
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
-            border-top: 5px solid var(--ana-yesil);
+            border-radius: 10px;
+            border-top: 6px solid var(--ana-yesil);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s;
         }
 
         .kart:hover {
             transform: translateY(-10px);
             border-top-color: var(--altin);
+            box-shadow: 0 15px 40px rgba(8, 50, 36, 0.1);
         }
 
-        .kart h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--ana-yesil); }
-        .kart p { font-size: 1rem; color: #555; line-height: 1.6; }
+        .kart h3 { color: var(--ana-yesil); margin-bottom: 20px; font-size: 1.6rem; }
+        .kart p { color: #444; font-size: 1.05rem; line-height: 1.7; }
 
         /* --- FOOTER --- */
         footer {
             background: var(--ana-yesil);
             color: var(--beyaz);
-            padding: 60px 8% 30px;
+            padding: 80px 8% 40px;
             text-align: center;
         }
 
-        .footer-content h3 { font-size: 1.8rem; color: var(--altin); margin-bottom: 15px; }
-        .footer-links { margin: 20px 0; }
-        .footer-links p { margin-bottom: 8px; }
-        .footer-links a { color: var(--beyaz); text-decoration: none; }
-
+        .footer-content h3 { font-size: 2rem; color: var(--altin); margin-bottom: 20px; }
+        .footer-content p { margin-bottom: 10px; opacity: 0.8; }
+        
         .copyright {
-            margin-top: 40px;
-            padding-top: 20px;
+            margin-top: 60px; padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.85rem;
-            opacity: 0.6;
+            font-size: 0.9rem; opacity: 0.5;
+        }
+
+        /* --- ANİMASYON TANIMLARI --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
-            header { padding: 10px 5%; flex-direction: column; }
-            nav ul { margin-top: 10px; }
+            header { flex-direction: column; padding: 15px; }
+            nav ul { margin-top: 15px; }
             nav ul li { margin: 0 10px; }
-            .hero-content h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -177,37 +164,60 @@
         <nav>
             <ul>
                 <li><a href="#anasayfa">Anasayfa</a></li>
-                <li><a href="#calisma-alanlari">Faaliyet Alanlarımız</a></li>
+                <li><a href="#calisma-alanlari">Faaliyetlerimiz</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="anasayfa" class="hero">
-        <div class="hero-content" data-aos="fade-up">
+        <div class="hero-content">
             <h1>Büyüknisan Hukuk Bürosu</h1>
-            <p>İstanbul merkezli ofisimizde, hukukun her alanında profesyonel danışmanlık ve etkin çözüm ortaklığı sunuyoruz.</p>
-            <a href="#iletisim" class="btn-glow">BİZE ULAŞIN</a>
+            <p>İstanbul merkezli ofisimizde, uluslararası vizyon ve yerel tecrübe ile hukuki danışmanlık sağlıyoruz.</p>
+            <a href="#iletisim" style="padding: 15px 40px; background: var(--altin); color: var(--ana-yesil); text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block;">İLETİŞİME GEÇİN</a>
         </div>
     </section>
 
     <section id="calisma-alanlari" class="alanlar">
-        <h2 class="section-title" data-aos="fade-up">Faaliyet Alanlarımız</h2>
-        
-        <div class="kart-grid">
-            <div class="kart" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="section-title">Faaliyet Alanlarımız</h2>
+        <div class="kart-container">
+            
+            <div class="kart">
                 <h3>Yabancılar Hukuku</h3>
-                <p>İkamet, çalışma izinleri ve Türk vatandaşlığı süreçlerinde kapsamlı hukuki destek ve danışmanlık.</p>
+                <p>İkamet ve çalışma izni başvuruları, Türk vatandaşlığının kazanılması süreçleri ve sınır dışı (deport) kararlarına karşı yürütülen hukuki işlemler.</p>
             </div>
 
-            <div class="kart" data-aos="fade-up" data-aos-delay="200">
+            <div class="kart">
                 <h3>Sağlık Hukuku</h3>
-                <p>Malpraktis davaları, hasta-hekim hakları ve sağlık mevzuatından doğan tüm uyuşmazlıkların yönetimi.</p>
+                <p>Hatalı tıbbi uygulama (malpraktis) iddiaları, hasta ve hekim hakları ile sağlık mevzuatından doğan uyuşmazlıklarda hukuki danışmanlık.</p>
             </div>
 
-            <div class="kart" data-aos="fade-up" data-aos-delay="300">
+            <div class="kart">
                 <h3>Tazminat Hukuku</h3>
-                <p>İş kazaları, trafik kazaları ve sözleşme ihlallerinden doğan maddi-manevi tazminat süreçleri.</p>
+                <p>Haksız fiil, trafik kazaları, iş kazaları veya sözleşmeye aykırılıktan doğan maddi ve manevi tazminat taleplerinin yargısal süreçleri.</p>
             </div>
 
-            <div class="
+            <div class="kart">
+                <h3>Ceza Hukuku</h3>
+                <p>Soruşturma ve kovuşturma evrelerinde şüpheli, sanık müdafiiliği veya müşteki/katılan vekilliği ile ceza yargılamasında hukuki temsil.</p>
+            </div>
+
+            <div class="kart">
+                <h3>İdare Hukuku</h3>
+                <p>İdari işlemlerin iptali, tam yargı (tazminat) davaları ve idari para cezalarına karşı idareye ve yargı mercilerine yapılacak başvurular.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="iletisim">
+        <div class="footer-content">
+            <h3>BÜYÜKNİSAN HUKUK BÜROSU</h3>
+            <p>İstanbul, Türkiye</p>
+            <p><a href="mailto:info@buyuknisanhukuk.com" style="color: var(--altin); text-decoration: none;">info@buyuknisanhukuk.com</a></p>
+        </div>
+        <p class="copyright">© 2026 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
