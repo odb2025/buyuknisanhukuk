@@ -81,30 +81,16 @@
         .btn-iletisim { font-family: 'Cinzel', serif; padding: 22px 70px; background-color: var(--ana-yesil); color: var(--altin); text-decoration: none; font-weight: bold; font-size: 1rem; letter-spacing: 2px; transition: 0.4s; display: inline-block; border: 1px solid var(--ana-yesil); animation: pulse-animation 2s infinite; }
         .btn-iletisim:hover { background-color: var(--beyaz); color: var(--ana-yesil); border-color: var(--ana-yesil); }
 
-        /* --- ÇEREZ BİLDİRİMİ (COOKIE BANNER) --- */
-        #cookie-banner {
-            position: fixed; bottom: 0; left: 0; width: 100%;
-            background: rgba(8, 50, 36, 0.95); color: var(--beyaz);
-            padding: 15px 8%; display: flex; justify-content: space-between;
-            align-items: center; z-index: 2000; font-size: 14px;
-            border-top: 2px solid var(--altin); display: none;
-        }
+        /* --- ÇEREZ BİLDİRİMİ --- */
+        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(8, 50, 36, 0.95); color: var(--beyaz); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; z-index: 2000; font-size: 14px; border-top: 2px solid var(--altin); display: none; }
         .cookie-btns { display: flex; gap: 15px; }
         .cookie-btn { padding: 8px 20px; border: none; cursor: pointer; font-weight: bold; transition: 0.3s; }
         .accept-btn { background: var(--altin); color: var(--ana-yesil); }
         .kvkk-link { color: var(--altin); text-decoration: underline; cursor: pointer; }
 
         /* --- KVKK MODAL --- */
-        #kvkk-modal {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8); z-index: 3000; display: none;
-            justify-content: center; align-items: center; padding: 20px;
-        }
-        .modal-content {
-            background: var(--beyaz); padding: 40px; border-radius: 5px;
-            max-width: 800px; width: 100%; max-height: 80vh; overflow-y: auto;
-            position: relative;
-        }
+        #kvkk-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; display: none; justify-content: center; align-items: center; padding: 20px; }
+        .modal-content { background: var(--beyaz); padding: 40px; border-radius: 5px; max-width: 800px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; }
         .close-modal { position: absolute; top: 20px; right: 20px; font-size: 24px; cursor: pointer; color: var(--ana-yesil); }
 
         /* --- FLOAT BUTTONS --- */
@@ -144,18 +130,37 @@
     <section id="calisma-alanlari" class="alanlar">
         <h2 class="section-title">Uzmanlık Alanlarımız</h2>
         <div class="kart-container">
+            
             <div class="kart">
                 <h3>Vatandaşlık ve Yabancılar Hukuku</h3>
-                <p>İkamet ve çalışma izinlerine müteallik idari süreçlerin takibi, Türk vatandaşlığının iktisabı ve sınır dışı kararlarına yönelik iptal davaları.</p>
+                <p>İkamet ve çalışma izinlerine müteallik idari süreçlerin takibi, Türk vatandaşlığının iktisabı, sınır dışı (deport) kararlarına yönelik iptal davaları ve idari gözetim süreçlerinin yönetimi.</p>
             </div>
+
             <div class="kart">
                 <h3>Sağlık ve Tıp Hukuku</h3>
-                <p>Tıbbi malpraktis iddialarından neşet eden uyuşmazlıklar ve hasta haklarının korunması süreçlerinde hukuki danışmanlık hizmetleri.</p>
+                <p>Tıbbi malpraktis iddialarından neşet eden uyuşmazlıklar, hasta ve hekim haklarının korunması ile sağlık mevzuatına uyum süreçlerinde profesyonel hukuki danışmanlık.</p>
             </div>
+
             <div class="kart">
                 <h3>Borçlar ve Tazminat Hukuku</h3>
-                <p>Haksız fiil, iş ve trafik kazalarından kaynaklanan maddi ve manevi tazminat taleplerinin yargısal merciler nezdinde temsili.</p>
+                <p>Haksız fiil, iş ve trafik kazaları ile akdi yükümlülüklerin ihlalinden kaynaklanan maddi ve manevi tazminat taleplerinin yargısal merciler nezdinde temsili ve hak takibi.</p>
             </div>
+
+            <div class="kart">
+                <h3>Ceza Hukuku ve Müdafiilik</h3>
+                <p>Soruşturma ve kovuşturma safhalarında şüpheli, sanık müdafiiliği veya müşteki vekilliği kapsamında, adil yargılanma hakkı çerçevesinde stratejik savunma ve temsil faaliyeti.</p>
+            </div>
+
+            <div class="kart">
+                <h3>İdare Hukuku ve Dava Takibi</h3>
+                <p>İdari işlemlerin iptali, tam yargı davaları ve idari yaptırımlara karşı yürütülen hukuki itiraz süreçlerinin, idari yargı mercileri nezdinde profesyonelce yönetilmesi.</p>
+            </div>
+
+            <div class="kart">
+                <h3>İcra ve İflas Hukuku</h3>
+                <p>Alacak takibi, ilamlı ve ilamsız icra süreçleri, haciz işlemleri ile konkordato ve iflas süreçlerinin yönetimi kapsamında kapsamlı icra hukuku hizmetleri.</p>
+            </div>
+
         </div>
     </section>
 
@@ -173,9 +178,7 @@
 
     <div id="cookie-banner">
         <span>Sitemizde size en iyi deneyimi sunabilmek için çerezler kullanılmaktadır. Detaylı bilgi için <span class="kvkk-link" onclick="openKVKK()">KVKK Aydınlatma Metni</span>'ni inceleyebilirsiniz.</span>
-        <div class="cookie-btns">
-            <button class="cookie-btn accept-btn" onclick="acceptCookies()">Kabul Ediyorum</button>
-        </div>
+        <div class="cookie-btns"><button class="cookie-btn accept-btn" onclick="acceptCookies()">Kabul Ediyorum</button></div>
     </div>
 
     <div id="kvkk-modal">
@@ -183,15 +186,12 @@
             <span class="close-modal" onclick="closeKVKK()">&times;</span>
             <h2 style="font-family: 'Cinzel', serif; color: var(--ana-yesil); margin-bottom: 20px;">KVKK AYDINLATMA METNİ</h2>
             <p style="font-size: 0.9rem; text-align: justify;">
-                <strong>Büyüknisan Hukuk Bürosu</strong> olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, veri sorumlusu sıfatıyla, kişisel verilerinizin güvenliği hususuna azami hassasiyet göstermekteyiz.<br><br>
-                <strong>Veri İşleme Amacı:</strong> Sitemiz üzerindeki iletişim butonları (WhatsApp, Telegram) aracılığıyla tarafımıza ulaştığınızda paylaştığınız bilgiler, sadece hukuki danışmanlık taleplerinizin karşılanması ve sizinle iletişim kurulması amacıyla işlenmektedir.<br><br>
-                <strong>Çerezler:</strong> Sitemiz, kullanıcı deneyimini iyileştirmek ve temel site fonksiyonlarını yerine getirmek amacıyla teknik çerezler kullanmaktadır. Bu çerezler aracılığıyla kişisel tanımlama yapılmamaktadır.<br><br>
-                Haklarınız konusunda her zaman tarafımıza info@buyuknisanhukuk.com üzerinden ulaşabilirsiniz.
+                <strong>Büyüknisan Hukuk Bürosu</strong> olarak, kişisel verilerinizin güvenliğine önem veriyoruz. İletişim butonları üzerinden tarafımıza ulaştığınızda paylaşılan verileriniz sadece danışmanlık taleplerinizin karşılanması amacıyla işlenmektedir.
             </p>
         </div>
     </div>
 
-    <a href="https://t.me/KULLANICI_ADINIZ" class="float-btn tg-float" target="_blank">
+    <a href="https://t.me/" class="float-btn tg-float" target="_blank">
         <svg width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM12.166 5.023c-.11-.46-.36-.59-.75-.59-.25 0-.55.08-.85.2l-6.15 2.53c-.35.15-.55.35-.55.6s.2.45.55.6l1.65.65c.3.1.55 0 .75-.2l3.4-2.35c.15-.1.3 0 .2.15l-2.65 2.5c-.2.2-.2.45 0 .65l2.1 1.75c.35.3.7.45 1.05.45.4 0 .75-.25.85-.75l1.1-5.3c.1-.45-.1-.85-.35-.95z"/></svg>
     </a>
 
@@ -205,26 +205,11 @@
     </footer>
 
     <script>
-        // SSS Akordeon
         document.querySelectorAll('.sss-soru').forEach(button => {
-            button.addEventListener('click', () => {
-                button.parentElement.classList.toggle('active');
-            });
+            button.addEventListener('click', () => { button.parentElement.classList.toggle('active'); });
         });
-
-        // Çerez Bandı Kontrolü
-        window.onload = function() {
-            if(!localStorage.getItem('cookiesAccepted')) {
-                document.getElementById('cookie-banner').style.display = 'flex';
-            }
-        };
-
-        function acceptCookies() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-banner').style.display = 'none';
-        }
-
-        // KVKK Modal Kontrolü
+        window.onload = function() { if(!localStorage.getItem('cookiesAccepted')) { document.getElementById('cookie-banner').style.display = 'flex'; } };
+        function acceptCookies() { localStorage.setItem('cookiesAccepted', 'true'); document.getElementById('cookie-banner').style.display = 'none'; }
         function openKVKK() { document.getElementById('kvkk-modal').style.display = 'flex'; }
         function closeKVKK() { document.getElementById('kvkk-modal').style.display = 'none'; }
     </script>
