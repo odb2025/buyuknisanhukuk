@@ -39,7 +39,7 @@
         }
 
         .logo { 
-            font-size: 24px; 
+            font-size: 22px; 
             color: var(--ana-yesil); 
             text-decoration: none; 
             font-weight: bold;
@@ -54,170 +54,21 @@
         }
         nav ul li a:hover { color: var(--altin); }
 
-        /* --- HERO (KARŞILAMA) --- */
+        /* --- HERO (Giriş Ekranı - Sadece Buton) --- */
         .hero {
-            height: 90vh;
+            height: 95vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(8, 50, 36, 0.8), rgba(8, 50, 36, 0.8)), url('giris.png'), var(--ana-yesil);
+            /* Görselin üzerine hafif bir gölge ekledim ki buton daha iyi seçilsin */
+            background: linear-gradient(rgba(8, 50, 36, 0.3), rgba(8, 50, 36, 0.3)), url('giris.png'), var(--ana-yesil);
             background-size: cover;
             background-position: center;
-            color: var(--beyaz);
-            padding: 0 20px;
             margin-top: 60px;
         }
 
-        .hero-content h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            margin-bottom: 20px;
-            animation: fadeInDown 1.5s ease;
-        }
-
-        .hero-content p {
-            font-size: clamp(1.1rem, 2vw, 1.5rem);
-            max-width: 800px;
-            margin: 0 auto 40px;
-            animation: fadeInUp 1.5s ease;
-        }
-
-        /* --- FAALİYET ALANLARI (GERİ GELDİ) --- */
-        .alanlar { padding: 100px 8%; background-color: var(--acik-gri); }
-        
-        .section-title { 
-            text-align: center; 
-            font-size: clamp(2rem, 4vw, 3rem); 
-            margin-bottom: 60px; 
-            color: var(--ana-yesil);
-            position: relative;
-        }
-        .section-title::after {
-            content: ''; width: 80px; height: 4px; background: var(--altin);
-            position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
-        }
-
-        .kart-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .kart {
-            background: var(--beyaz);
-            padding: 40px;
-            border-radius: 10px;
-            border-top: 6px solid var(--ana-yesil);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.4s;
-        }
-
-        .kart:hover {
-            transform: translateY(-10px);
-            border-top-color: var(--altin);
-            box-shadow: 0 15px 40px rgba(8, 50, 36, 0.1);
-        }
-
-        .kart h3 { color: var(--ana-yesil); margin-bottom: 20px; font-size: 1.6rem; }
-        .kart p { color: #444; font-size: 1.05rem; line-height: 1.7; }
-
-        /* --- FOOTER --- */
-        footer {
-            background: var(--ana-yesil);
-            color: var(--beyaz);
-            padding: 80px 8% 40px;
-            text-align: center;
-        }
-
-        .footer-content h3 { font-size: 2rem; color: var(--altin); margin-bottom: 20px; }
-        .footer-content p { margin-bottom: 10px; opacity: 0.8; }
-        
-        .copyright {
-            margin-top: 60px; padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem; opacity: 0.5;
-        }
-
-        /* --- ANİMASYON TANIMLARI --- */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; padding: 15px; }
-            nav ul { margin-top: 15px; }
-            nav ul li { margin: 0 10px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <a href="#" class="logo">BÜYÜKNİSAN HUKUK BÜROSU</a>
-        <nav>
-            <ul>
-                <li><a href="#anasayfa">Anasayfa</a></li>
-                <li><a href="#calisma-alanlari">Faaliyetlerimiz</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="anasayfa" class="hero">
-        <div class="hero-content">
-            <h1>Büyüknisan Hukuk Bürosu</h1>
-            <p>İstanbul merkezli ofisimizde, uluslararası vizyon ve yerel tecrübe ile hukuki danışmanlık sağlıyoruz.</p>
-            <a href="#iletisim" style="padding: 15px 40px; background: var(--altin); color: var(--ana-yesil); text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block;">İLETİŞİME GEÇİN</a>
-        </div>
-    </section>
-
-    <section id="calisma-alanlari" class="alanlar">
-        <h2 class="section-title">Faaliyet Alanlarımız</h2>
-        <div class="kart-container">
-            
-            <div class="kart">
-                <h3>Yabancılar Hukuku</h3>
-                <p>İkamet ve çalışma izni başvuruları, Türk vatandaşlığının kazanılması süreçleri ve sınır dışı (deport) kararlarına karşı yürütülen hukuki işlemler.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Sağlık Hukuku</h3>
-                <p>Hatalı tıbbi uygulama (malpraktis) iddiaları, hasta ve hekim hakları ile sağlık mevzuatından doğan uyuşmazlıklarda hukuki danışmanlık.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Tazminat Hukuku</h3>
-                <p>Haksız fiil, trafik kazaları, iş kazaları veya sözleşmeye aykırılıktan doğan maddi ve manevi tazminat taleplerinin yargısal süreçleri.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Ceza Hukuku</h3>
-                <p>Soruşturma ve kovuşturma evrelerinde şüpheli, sanık müdafiiliği veya müşteki/katılan vekilliği ile ceza yargılamasında hukuki temsil.</p>
-            </div>
-
-            <div class="kart">
-                <h3>İdare Hukuku</h3>
-                <p>İdari işlemlerin iptali, tam yargı (tazminat) davaları ve idari para cezalarına karşı idareye ve yargı mercilerine yapılacak başvurular.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <footer id="iletisim">
-        <div class="footer-content">
-            <h3>BÜYÜKNİSAN HUKUK BÜROSU</h3>
-            <p>İstanbul, Türkiye</p>
-            <p><a href="mailto:info@buyuknisanhukuk.com" style="color: var(--altin); text-decoration: none;">info@buyuknisanhukuk.com</a></p>
-        </div>
-        <p class="copyright">© 2026 Büyüknisan Hukuk Bürosu. Tüm hakları saklıdır.</p>
-    </footer>
-
-</body>
-</html>
+        .btn-iletisim {
+            padding: 18px 50px;
+            background: var(--altin);
+            color:
