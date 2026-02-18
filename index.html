@@ -13,6 +13,7 @@
             --beyaz: #ffffff;
             --acik-gri: #f4f7f6;
             --text-koyu: #1c1c1c;
+            --wp-yesil: #25D366;
         }
 
         * {
@@ -23,7 +24,7 @@
         }
 
         body {
-            font-family: 'Georgia', serif; /* Hukuki ağırlık için klasik ve güvenilir font */
+            font-family: 'Georgia', serif;
             background-color: var(--beyaz);
             color: var(--text-koyu);
             line-height: 1.6;
@@ -52,26 +53,10 @@
             letter-spacing: 1px;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--ana-yesil);
-            font-weight: bold;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--altin);
-        }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { text-decoration: none; color: var(--ana-yesil); font-weight: bold; font-size: 15px; transition: 0.3s; }
+        nav ul li a:hover { color: var(--altin); }
 
         /* --- GİRİŞ EKRANI (HERO) --- */
         .hero {
@@ -79,7 +64,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Arka plan görseli yüklenmezse ekran beyaz kalmasın diye yeşil dolgu eklendi */
             background-color: var(--ana-yesil);
             background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('giris.png');
             background-size: cover;
@@ -98,124 +82,58 @@
             border-radius: 4px;
             transition: 0.4s;
             box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            animation: fadeInBtn 2s ease-out; /* Buton için yumuşak giriş animasyonu */
         }
 
         .btn-iletisim:hover {
             background-color: var(--beyaz);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
         }
 
         /* --- FAALİYET ALANLARI --- */
-        .alanlar {
-            padding: 100px 8%;
-            background-color: var(--acik-gri);
+        .alanlar { padding: 100px 8%; background-color: var(--acik-gri); text-align: center; }
+        .section-title { font-size: 2.5rem; color: var(--ana-yesil); margin-bottom: 60px; position: relative; }
+        .section-title::after { content: ''; width: 70px; height: 3px; background: var(--altin); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
+
+        .kart-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .kart { background: var(--beyaz); padding: 40px; width: 350px; border-top: 6px solid var(--ana-yesil); box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.4s; text-align: left; }
+        .kart:hover { transform: translateY(-10px); border-top-color: var(--altin); }
+        .kart h3 { color: var(--ana-yesil); margin-bottom: 20px; font-size: 1.6rem; }
+
+        /* --- WHATSAPP BUTONU (SABİT) --- */
+        .wp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--wp-yesil);
+            color: #FFF;
+            border-radius: 50px;
             text-align: center;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--ana-yesil);
-            margin-bottom: 60px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 70px;
-            height: 3px;
-            background: var(--altin);
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .kart-container {
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
+            align-items: center;
+            text-decoration: none;
+            transition: 0.3s;
         }
-
-        .kart {
-            background: var(--beyaz);
-            padding: 40px;
-            width: 350px;
-            border-top: 6px solid var(--ana-yesil);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.4s;
-            text-align: left;
-        }
-
-        .kart:hover {
-            transform: translateY(-10px);
-            border-top-color: var(--altin);
-            box-shadow: 0 15px 35px rgba(8, 50, 36, 0.1);
-        }
-
-        .kart h3 {
-            color: var(--ana-yesil);
-            margin-bottom: 20px;
-            font-size: 1.6rem;
-        }
-
-        .kart p {
-            font-size: 1rem;
-            color: #444;
-            line-height: 1.7;
+        .wp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
         }
 
         /* --- ALT BİLGİ (FOOTER) --- */
-        footer {
-            background: var(--ana-yesil);
-            color: var(--beyaz);
-            padding: 80px 8% 40px;
-            text-align: center;
-        }
+        footer { background: var(--ana-yesil); color: var(--beyaz); padding: 80px 8% 40px; text-align: center; }
+        .footer-content h3 { font-size: 2rem; color: var(--altin); margin-bottom: 25px; }
+        .footer-content a { color: var(--altin); text-decoration: none; border-bottom: 1px solid var(--altin); }
+        .copyright { margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; opacity: 0.6; }
 
-        .footer-content h3 {
-            font-size: 2rem;
-            color: var(--altin);
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-        }
-
-        .footer-content p {
-            margin-bottom: 10px;
-            opacity: 0.9;
-        }
-
-        .footer-content a {
-            color: var(--altin);
-            text-decoration: none;
-            border-bottom: 1px solid var(--altin);
-        }
-
-        .copyright {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.85rem;
-            opacity: 0.6;
-        }
-
-        /* --- CSS ANİMASYONLARI --- */
-        @keyframes fadeInBtn {
-            0% { opacity: 0; transform: scale(0.9); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        /* Mobil Uyumluluk */
         @media (max-width: 768px) {
             header { flex-direction: column; padding: 15px; }
             nav ul { margin-top: 15px; }
-            nav ul li { margin: 0 10px; }
-            .hero { height: 70vh; }
-            .section-title { font-size: 2rem; }
+            .wp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 25px; }
         }
     </style>
 </head>
@@ -239,34 +157,19 @@
     <section id="calisma-alanlari" class="alanlar">
         <h2 class="section-title">Faaliyet Alanlarımız</h2>
         <div class="kart-container">
-            
-            <div class="kart">
-                <h3>Yabancılar Hukuku</h3>
-                <p>İkamet ve çalışma izni başvuruları, Türk vatandaşlığının kazanılması süreçleri ve sınır dışı (deport) kararlarına karşı yürütülen hukuki işlemler.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Sağlık Hukuku</h3>
-                <p>Hatalı tıbbi uygulama (malpraktis) iddiaları, hasta ve hekim hakları ile sağlık mevzuatından doğan uyuşmazlıklarda hukuki danışmanlık.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Tazminat Hukuku</h3>
-                <p>Haksız fiil, trafik kazaları, iş kazaları veya sözleşmeye aykırılıktan doğan maddi ve manevi tazminat taleplerinin yargısal süreçleri.</p>
-            </div>
-
-            <div class="kart">
-                <h3>Ceza Hukuku</h3>
-                <p>Soruşturma ve kovuşturma evrelerinde şüpheli, sanık müdafiiliği veya müşteki/katılan vekilliği ile ceza yargılamasında hukuki temsil.</p>
-            </div>
-
-            <div class="kart">
-                <h3>İdare Hukuku</h3>
-                <p>İdari işlemlerin iptali, tam yargı (tazminat) davaları ve idari para cezalarına karşı idareye ve yargı mercilerine yapılacak başvurular.</p>
-            </div>
-
+            <div class="kart"><h3>Yabancılar Hukuku</h3><p>İkamet, çalışma izinleri ve vatandaşlık süreçlerinde profesyonel hukuki danışmanlık.</p></div>
+            <div class="kart"><h3>Sağlık Hukuku</h3><p>Malpraktis davaları ve hasta hakları uyuşmazlıklarında etkin hukuki temsil.</p></div>
+            <div class="kart"><h3>Tazminat Hukuku</h3><p>Trafik ve iş kazalarından doğan maddi ve manevi zararların tazmini süreçleri.</p></div>
+            <div class="kart"><h3>Ceza Hukuku</h3><p>Soruşturma ve kovuşturma aşamalarında stratejik ve profesyonel müdafiilik.</p></div>
+            <div class="kart"><h3>İdare Hukuku</h3><p>İdari işlemlerin iptali ve tam yargı davalarında hukuki danışmanlık.</p></div>
         </div>
     </section>
+
+    <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20danışmanlık%20almak%20istiyorum." class="wp-float" target="_blank">
+        <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
 
     <footer id="iletisim">
         <div class="footer-content">
