@@ -16,8 +16,8 @@
             --ana-yesil: #083224;
             --altin: #d4af37;
             --beyaz: #ffffff;
-            --acik-gri: #f9fbfa; /* Biraz daha aydınlık, minimal bir gri */
-            --text-koyu: #2b2b2b; /* Çok sert olmayan bir siyah */
+            --acik-gri: #f9fbfa;
+            --text-koyu: #2b2b2b;
             --wp-yesil: #25D366;
             --tg-mavi: #0088cc;
         }
@@ -28,7 +28,7 @@
             font-family: 'Playfair Display', serif;
             background-color: var(--beyaz);
             color: var(--text-koyu);
-            line-height: 1.7; /* Okunabilirliği artırmak için satır aralığı açıldı */
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
@@ -43,7 +43,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.03); /* Gölge daha minimalize edildi */
+            box-shadow: 0 1px 5px rgba(0,0,0,0.03);
         }
 
         .logo-container { display: flex; flex-direction: column; text-decoration: none; }
@@ -60,30 +60,31 @@
         .lang-btn { border: 1px solid var(--ana-yesil); padding: 5px 12px; font-size: 11px; text-decoration: none; color: var(--ana-yesil); transition: all 0.3s; }
         .lang-btn:hover { background: var(--ana-yesil); color: var(--beyaz); }
 
-        /* --- HERO (Daha Minimal, Daha Zarif) --- */
+        /* --- HERO (Daha da Minimalize Edildi) --- */
         .hero { 
-            height: 45vh; /* Yükseklik zarif bir seviyeye çekildi */
+            height: 25vh; /* Yükseklik belirgin şekilde düşürüldü (Eski: 45vh) */
+            min-height: 200px; /* Mobil cihazlar için güvenlik yüksekliği */
             background: linear-gradient(135deg, #083224 0%, #051e15 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 60px;
+            margin-top: 60px; /* Header yüksekliği kadar boşluk */
             color: var(--altin);
             text-align: center;
             padding: 0 5%;
         }
         .hero-title { 
             font-family: 'Cinzel', serif; 
-            font-size: 2.2rem; 
-            letter-spacing: 4px; 
+            font-size: 2rem; /* Font boyutu hafifçe dengelendi */
+            letter-spacing: 3px; 
             font-weight: 400; 
         }
         .hero-subtitle {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--beyaz);
             display: block;
-            margin-top: 15px;
+            margin-top: 10px;
             font-weight: 400;
             letter-spacing: 1px;
             font-style: italic;
@@ -95,7 +96,7 @@
         .section-title { font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--ana-yesil); margin-bottom: 60px; font-weight: 400; position: relative; }
         .section-title::after { content: ''; width: 30px; height: 1px; background: var(--altin); position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); }
 
-        /* --- KARTLAR (Minimal Çizgiler) --- */
+        /* --- KARTLAR --- */
         .kart-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
         .kart { background: var(--beyaz); padding: 40px 30px; border: 1px solid #eaeaea; border-top: 3px solid var(--ana-yesil); text-align: left; transition: all 0.4s ease; }
         .kart:hover { transform: translateY(-3px); border-top-color: var(--altin); box-shadow: 0 15px 40px rgba(0,0,0,0.03); }
@@ -128,8 +129,12 @@
         .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.15); text-decoration: none; font-size: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .float-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
-        /* --- FOOTER --- */
-        footer { background: var(--ana-yesil); padding: 60px 8% 40px; text-align: center; }
+        /* --- FOOTER (Daha da Minimalize Edildi) --- */
+        footer { 
+            background: var(--ana-yesil); 
+            padding: 30px 8% 20px; /* Dolgular azaltıldı (Eski: 60px 8% 40px) */
+            text-align: center; 
+        }
 
         /* --- MEDIA QUERIES --- */
         @media (max-width: 768px) {
@@ -137,8 +142,8 @@
             nav { position: absolute; top: 100%; left: 0; width: 100%; background: white; display: none; flex-direction: column; padding: 25px; border-top: 1px solid #eee; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
             nav.active { display: flex; }
             nav ul { flex-direction: column; gap: 20px; }
-            .hero { height: auto; padding: 80px 5%; }
-            .hero-title { font-size: 1.8rem; }
+            .hero { height: auto; padding: 60px 5%; /* Mobilde daha da kompakt */ }
+            .hero-title { font-size: 1.6rem; }
             .section { padding: 60px 5%; }
             .float-btn { width: 45px; height: 45px; font-size: 18px; }
         }
@@ -196,7 +201,7 @@
                 <button class="sss-soru">Dijital danışmanlık süreci nasıl başlar?</button>
                 <div class="sss-cevap">WhatsApp veya Telegram üzerinden ilk başvurunuzu takiben çevrimiçi randevu oluşturulmaktadır.</div>
             </div>
-            </div>
+        </div>
     </section>
 
     <section id="iletisim" class="section" style="background: var(--acik-gri);">
@@ -239,8 +244,8 @@
     </div>
 
     <footer>
-        <div style="font-family:'Cinzel', serif; color:var(--altin); font-size:1.3rem; margin-bottom:15px; font-weight: 400; letter-spacing: 2px;">BÜYÜKNİSAN HUKUK BÜROSU</div>
-        <div style="font-size:0.75rem; color: #fff; opacity:0.5; border-top:1px solid rgba(255,255,255,0.05); padding-top:20px; letter-spacing: 1px;">© 2026 BÜYÜKNİSAN HUKUK BÜROSU. TÜM HAKLARI SAKLIDIR.</div>
+        <div style="font-family:'Cinzel', serif; color:var(--altin); font-size:1.3rem; margin-bottom:10px; font-weight: 400; letter-spacing: 2px;">BÜYÜKNİSAN HUKUK BÜROSU</div>
+        <div style="font-size:0.75rem; color: #fff; opacity:0.5; border-top:1px solid rgba(255,255,255,0.05); padding-top:15px; letter-spacing: 1px;">© 2026 BÜYÜKNİSAN HUKUK BÜROSU. TÜM HAKLARI SAKLIDIR.</div>
     </footer>
 
     <script>
@@ -254,10 +259,6 @@
 
             document.querySelectorAll('.sss-soru').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Diğer açık olanları kapatmak isterseniz bu kodu aktif edebilirsiniz
-                    // document.querySelectorAll('.sss-item').forEach(item => {
-                    //    if(item !== btn.parentElement) item.classList.remove('active');
-                    // });
                     btn.parentElement.classList.toggle('active');
                 });
             });
