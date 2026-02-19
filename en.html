@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Büyüknisan Law Firm | Istanbul | Digital Legal Services</title>
+    <title>Büyüknisan Law Firm | Istanbul | Online Legal Services</title>
     
     <meta name="robots" content="noindex, nofollow">
     
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
         :root {
-            --primary-green: #083224;
-            --gold: #d4af37;
-            --white: #ffffff;
-            --light-grey: #f4f7f6;
-            --text-dark: #1c1c1c;
-            --wp-green: #25D366;
-            --tg-blue: #0088cc;
+            --ana-yesil: #083224;
+            --altin: #d4af37;
+            --beyaz: #ffffff;
+            --acik-gri: #f9fbfa;
+            --text-koyu: #2b2b2b;
+            --wp-yesil: #25D366;
+            --tg-mavi: #0088cc;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 
         body {
             font-family: 'Playfair Display', serif;
-            background-color: var(--white);
-            color: var(--text-dark);
-            line-height: 1.6;
+            background-color: var(--beyaz);
+            color: var(--text-koyu);
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
@@ -41,174 +43,245 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 5px rgba(0,0,0,0.03);
         }
 
         .logo-container { display: flex; flex-direction: column; text-decoration: none; }
-        .logo-text { font-family: 'Cinzel', serif; font-size: 20px; color: var(--primary-green); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
-        .logo-subtext { font-size: 9px; color: var(--gold); letter-spacing: 3.5px; text-transform: uppercase; border-top: 1px solid var(--gold); margin-top: 2px; font-weight: bold; }
+        .logo-text { font-family: 'Cinzel', serif; font-size: 20px; color: var(--ana-yesil); font-weight: 700; letter-spacing: 2px; }
+        .logo-subtext { font-size: 9px; color: var(--altin); letter-spacing: 3px; text-transform: uppercase; border-top: 1px solid rgba(212, 175, 55, 0.5); margin-top: 3px; font-weight: normal; padding-top: 2px; }
 
         .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
-        .menu-toggle span { width: 25px; height: 2px; background: var(--primary-green); transition: 0.3s; }
+        .menu-toggle span { width: 25px; height: 2px; background: var(--ana-yesil); transition: 0.3s; }
 
-        nav ul { list-style: none; display: flex; align-items: center; gap: 20px; }
-        nav ul li a { text-decoration: none; color: var(--primary-green); font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+        nav ul { list-style: none; display: flex; align-items: center; gap: 25px; }
+        nav ul li a { text-decoration: none; color: var(--ana-yesil); font-weight: 400; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+        nav ul li a:hover { color: var(--altin); }
 
-        .lang-btn { border: 1px solid var(--primary-green); padding: 5px 12px; font-size: 11px; text-decoration: none; color: var(--primary-green); font-weight: bold; }
+        .lang-btn { border: 1px solid var(--ana-yesil); padding: 5px 12px; font-size: 11px; text-decoration: none; color: var(--ana-yesil); transition: all 0.3s; }
+        .lang-btn:hover { background: var(--ana-yesil); color: var(--beyaz); }
 
-        /* --- HERO (Pure CSS Gradient) --- */
+        /* --- HERO --- */
         .hero { 
-            height: 70vh; 
-            background: linear-gradient(135deg, #083224 0%, #041a13 100%);
+            height: 25vh; 
+            min-height: 200px; 
+            background: linear-gradient(135deg, #083224 0%, #051e15 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 60px;
-            color: var(--gold);
+            margin-top: 60px; 
+            color: var(--altin);
             text-align: center;
+            padding: 0 5%;
         }
-        .hero-title { font-family: 'Cinzel'; font-size: 2.2rem; letter-spacing: 5px; opacity: 0.9; padding: 20px; text-transform: uppercase; }
+        .hero-title { 
+            font-family: 'Cinzel', serif; 
+            font-size: 2rem; 
+            letter-spacing: 3px; 
+            font-weight: 400; 
+        }
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--beyaz);
+            display: block;
+            margin-top: 10px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-style: italic;
+            opacity: 0.9;
+        }
 
-        /* --- SECTION STYLES --- */
-        .section { padding: 80px 8%; text-align: center; }
-        .section-title { font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--primary-green); margin-bottom: 50px; position: relative; }
-        .section-title::after { content: ''; width: 40px; height: 2px; background: var(--gold); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
+        /* --- GENEL SECTION --- */
+        .section { padding: 90px 8%; text-align: center; }
+        .section-title { font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--ana-yesil); margin-bottom: 60px; font-weight: 400; position: relative; }
+        .section-title::after { content: ''; width: 30px; height: 1px; background: var(--altin); position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); }
 
-        /* --- PRACTICE AREA CARDS --- */
-        .card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .card { background: var(--white); padding: 40px 30px; border-top: 4px solid var(--primary-green); border-bottom: 1px solid #eee; text-align: left; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-top-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { font-family: 'Cinzel', serif; color: var(--primary-green); font-size: 1.1rem; margin-bottom: 15px; }
+        /* --- KARTLAR --- */
+        .kart-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .kart { background: var(--beyaz); padding: 40px 30px; border: 1px solid #eaeaea; border-top: 3px solid var(--ana-yesil); text-align: left; transition: all 0.4s ease; }
+        .kart:hover { transform: translateY(-3px); border-top-color: var(--altin); box-shadow: 0 15px 40px rgba(0,0,0,0.03); }
+        .kart h3 { font-family: 'Cinzel', serif; color: var(--ana-yesil); font-size: 1.1rem; margin-bottom: 15px; font-weight: 700; }
+        .kart p { font-size: 0.95rem; color: #555; }
 
-        /* --- FAQ --- */
-        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
-        .faq-item { border-bottom: 1px solid #eee; padding: 15px 0; }
-        .faq-question { width: 100%; text-align: left; background: none; border: none; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--primary-green); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease-out; color: #555; font-size: 0.95rem; }
-        .faq-item.active .faq-answer { max-height: 300px; padding: 10px 0; }
-        .faq-question::after { content: '+'; color: var(--gold); font-size: 1.5rem; }
-        .faq-item.active .faq-question::after { content: '−'; }
+        /* --- SSS --- */
+        .sss-container { max-width: 700px; margin: 0 auto; text-align: left; }
+        .sss-item { border-bottom: 1px solid #eaeaea; padding: 20px 0; }
+        .sss-soru { width: 100%; text-align: left; background: none; border: none; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--ana-yesil); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .sss-cevap { max-height: 0; overflow: hidden; transition: 0.4s ease-out; color: #555; font-size: 0.95rem; }
+        .sss-item.active .sss-cevap { max-height: 300px; padding-top: 15px; }
+        .sss-soru::after { content: '+'; color: var(--altin); font-size: 1.5rem; font-weight: 300; }
+        .sss-item.active .sss-soru::after { content: '−'; }
 
-        /* --- CONTACT --- */
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
-        .contact-box { padding: 30px; background: var(--light-grey); border-radius: 2px; }
-        .contact-box h4 { font-family: 'Cinzel', serif; font-size: 1rem; margin-bottom: 10px; color: var(--primary-green); text-transform: uppercase; }
+        /* --- İLETİŞİM --- */
+        .iletisim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto; }
+        .iletisim-box { padding: 40px 30px; background: var(--beyaz); border: 1px solid #eaeaea; }
+        .iletisim-box h4 { font-family: 'Cinzel', serif; font-size: 1rem; margin-bottom: 10px; color: var(--ana-yesil); }
+        .iletisim-box p { font-size: 0.95rem; color: #555; }
 
-        /* --- MODALS & COOKIES --- */
-        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(8, 50, 36, 0.98); color: white; padding: 15px 8%; display: none; justify-content: space-between; align-items: center; z-index: 3000; font-size: 13px; border-top: 2px solid var(--gold); }
-        .cookie-btn { padding: 8px 20px; background: var(--gold); color: var(--primary-green); border: none; cursor: pointer; font-weight: bold; }
-        #privacy-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 4000; display: none; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background: white; padding: 40px; max-width: 700px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; border-radius: 4px; }
+        /* --- MODAL & COOKIE --- */
+        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--ana-yesil); color: white; padding: 15px 8%; display: none; justify-content: space-between; align-items: center; z-index: 3000; font-size: 13px; }
+        .cookie-btn { padding: 8px 24px; background: var(--altin); color: var(--ana-yesil); border: none; cursor: pointer; font-family: 'Cinzel', serif; font-weight: 700; font-size: 11px; letter-spacing: 1px; }
+        #kvkk-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 4000; display: none; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(3px); }
+        .modal-content { background: white; padding: 50px; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; }
 
         /* --- FLOAT BUTTONS --- */
-        .float-btns { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
-        .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none; font-weight: bold; }
+        .float-btns { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 2000; }
+        .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.15); text-decoration: none; font-size: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .float-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
-        /* --- MOBILE ADAPTATION --- */
+        /* --- FOOTER --- */
+        footer { 
+            background: var(--ana-yesil); 
+            padding: 30px 8% 20px; 
+            text-align: center; 
+        }
+
+        /* --- MEDIA QUERIES --- */
         @media (max-width: 768px) {
             .menu-toggle { display: flex; }
-            nav { position: absolute; top: 100%; left: 0; width: 100%; background: white; display: none; flex-direction: column; padding: 25px; border-top: 1px solid #eee; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+            nav { position: absolute; top: 100%; left: 0; width: 100%; background: white; display: none; flex-direction: column; padding: 25px; border-top: 1px solid #eee; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
             nav.active { display: flex; }
             nav ul { flex-direction: column; gap: 20px; }
-            .hero-title { font-size: 1.4rem; letter-spacing: 3px; }
+            .hero { height: auto; padding: 60px 5%; }
+            .hero-title { font-size: 1.6rem; }
             .section { padding: 60px 5%; }
+            .float-btn { width: 45px; height: 45px; font-size: 18px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="en.html" class="logo-container">
+        <a href="#" class="logo-container">
             <span class="logo-text">BÜYÜKNİSAN</span>
             <span class="logo-subtext">Law Firm</span>
         </a>
         <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
         <nav id="nav-list">
             <ul>
-                <li><a href="#corporate">Corporate</a></li>
-                <li><a href="#expertise">Practice Areas</a></li>
-                <li><a href="#faq">F.A.Q.</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#kurumsal">About Us</a></li>
+                <li><a href="#uzmanliklar">Practice Areas</a></li>
+                <li><a href="#sss">F.A.Q.</a></li>
+                <li><a href="#iletisim">Contact</a></li>
                 <li><a href="index.html" class="lang-btn">TR</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1 class="hero-title">BÜYÜKNİSAN LAW FIRM<br><span style="font-size: 0.9rem; letter-spacing: 2px;">ONLINE AND RAPID LEGAL SOLUTIONS</span></h1>
+        <h1 class="hero-title">
+            BÜYÜKNİSAN LAW FIRM
+            <span class="hero-subtitle">Online and Fast Legal Solutions</span>
+        </h1>
     </section>
 
-    <section id="corporate" class="section">
+    <section id="kurumsal" class="section">
         <h2 class="section-title">Corporate Profile</h2>
-        <p style="max-width: 850px; margin: 0 auto; font-style: italic; color: #444; font-size: 1.1rem;">
-            "Büyüknisan Law Firm is an Istanbul-based practice committed to addressing the requirements of an increasingly digitalised world. We provide high-prestige legal services through online platforms, ensuring rapid and borderless accessibility for our global clientele."
+        <p style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1rem; font-weight: 300;">
+            "Büyüknisan Law Firm is an Istanbul-based law office adapting to the requirements of the digitalizing world. We offer accessible and fast legal services worldwide through online platforms."
         </p>
     </section>
 
-    <section id="expertise" class="section" style="background: var(--light-grey);">
-        <h2 class="section-title">Fields of Expertise</h2>
-        <div class="card-container">
-            <div class="card"><h3>Immigration & Nationality</h3><p>Remote management of naturalisation, residence permits, and deportation proceedings.</p></div>
-            <div class="card"><h3>Healthcare & Medical Law</h3><p>Academic consultancy regarding clinical negligence (malpractice) and patient rights.</p></div>
-            <div class="card"><h3>Tort & Damages Law</h3><p>Litigation of material and non-pecuniary compensation claims before judicial authorities.</p></div>
-            <div class="card"><h3>Criminal Defence</h3><p>Professional defence services throughout investigation and prosecution phases.</p></div>
-            <div class="card"><h3>Administrative Litigation</h3><p>Legal management of annulment actions and full remedy cases against administrative acts.</p></div>
-            <div class="card"><h3>Execution & Bankruptcy</h3><p>Professional management of debt collection and insolvency proceedings.</p></div>
+    <section id="uzmanliklar" class="section" style="background: var(--acik-gri);">
+        <h2 class="section-title">Our Practice Areas</h2>
+        <div class="kart-container">
+            <div class="kart"><h3>Citizenship & Foreigners Law</h3><p>Management of citizenship acquisition, residence permits, and deportation processes.</p></div>
+            <div class="kart"><h3>Health & Medical Law</h3><p>Qualified consultancy in medical malpractice and patient rights disputes.</p></div>
+            <div class="kart"><h3>Obligations & Compensation</h3><p>Pursuit of pecuniary and non-pecuniary damage claims before judicial authorities.</p></div>
+            <div class="kart"><h3>Criminal Law</h3><p>Professional defense services during investigation and prosecution stages.</p></div>
+            <div class="kart"><h3>Administrative Law</h3><p>Legal process management of annulment actions and full remedy actions against administrative acts.</p></div>
+            <div class="kart"><h3>Execution & Bankruptcy</h3><p>Professional management of debt collection and execution-bankruptcy processes.</p></div>
         </div>
     </section>
 
-    <section id="faq" class="section">
+    <section id="sss" class="section">
         <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <button class="faq-question">How does the digital consultancy process begin?</button>
-                <div class="faq-answer">Following your initial enquiry via WhatsApp or Telegram, a secure online consultation appointment is scheduled.</div>
+        <div class="sss-container">
+            <div class="sss-item">
+                <button class="sss-soru">How does the digital consultation process start?</button>
+                <div class="sss-cevap">An online appointment is scheduled following your initial application via WhatsApp or Telegram.</div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section" style="background: var(--light-grey);">
+    <section id="iletisim" class="section" style="background: var(--acik-gri);">
         <h2 class="section-title">Digital Contact</h2>
-        <div class="contact-grid">
-            <div class="contact-box"><h4>Digital Service</h4><p>Location-independent, global digital consultancy model.</p></div>
-            <div class="contact-box"><h4>Corporate E-Mail</h4><p>info@buyuknisanhukuk.com</p></div>
+        <div class="iletisim-grid">
+            <div class="iletisim-box">
+                <h4>Online Service</h4>
+                <p>Location-independent, globally accessible online consultation model.</p>
+            </div>
+            <div class="iletisim-box">
+                <h4>Corporate E-Mail</h4>
+                <p>info@buyuknisanhukuk.com</p>
+            </div>
         </div>
     </section>
 
     <div id="cookie-banner">
-        <span>We use cookies to enhance your digital experience. <span onclick="openPrivacy()" style="text-decoration:underline; cursor:pointer;">Privacy Policy</span></span>
-        <button class="cookie-btn" onclick="acceptCookies()">Accept</button>
+        <span>We use cookies to enhance your experience. <span onclick="openKVKK()" style="text-decoration:none; border-bottom: 1px dashed white; cursor:pointer;">Privacy Policy</span></span>
+        <button class="cookie-btn" onclick="acceptCookies()">ACCEPT</button>
     </div>
 
-    <div id="privacy-modal">
+    <div id="kvkk-modal">
         <div class="modal-content">
-            <span style="position:absolute; top:20px; right:20px; cursor:pointer; font-size:24px;" onclick="closePrivacy()">&times;</span>
-            <h2 style="font-family: 'Cinzel'; color: var(--primary-green); margin-bottom: 20px;">PRIVACY POLICY</h2>
-            <p style="font-size: 0.9rem; text-align: justify;">Information shared during digital consultations is processed strictly for the purpose of addressing your legal enquiries and requirements.</p>
+            <span style="position:absolute; top:20px; right:20px; cursor:pointer; font-size:24px; color:#999; font-weight:300;" onclick="closeKVKK()">&times;</span>
+            <h2 style="font-family: 'Cinzel', serif; color: var(--ana-yesil); margin-bottom: 20px; font-size: 1.5rem; font-weight: 400;">DATA PROTECTION & PRIVACY NOTICE</h2>
+            <p style="font-size: 0.95rem; text-align: justify; color: #555; line-height: 1.8;">The data you share is processed solely to fulfill your consultation requests. While your legal processes are conducted meticulously, your privacy remains our top priority.</p>
         </div>
     </div>
 
     <div class="float-btns">
-        <a href="https://t.me/" class="float-btn" style="background: var(--tg-blue);" target="_blank">TG</a>
-        <a href="https://wa.me/90XXXXXXXXXX" class="float-btn" style="background: var(--wp-green);" target="_blank">WP</a>
+        <a href="mailto:info@buyuknisanhukuk.com" class="float-btn" style="background: var(--altin);" title="Send an E-Mail">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://t.me/" class="float-btn" style="background: var(--tg-mavi);" target="_blank" title="Contact via Telegram">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://wa.me/90XXXXXXXXXX" class="float-btn" style="background: var(--wp-yesil);" target="_blank" title="Contact via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <footer>
-        <div style="font-family:'Cinzel'; color:var(--gold); font-size:1.5rem; margin-bottom:10px;">BÜYÜKNİSAN LAW FIRM</div>
-        <div style="font-size:0.8rem; opacity:0.6; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;">© 2026 BÜYÜKNİSAN LAW FIRM. ALL RIGHTS RESERVED.</div>
+        <div style="font-family:'Cinzel', serif; color:var(--altin); font-size:1.3rem; margin-bottom:10px; font-weight: 400; letter-spacing: 2px;">BÜYÜKNİSAN LAW FIRM</div>
+        <div style="font-size:0.75rem; color: #fff; opacity:0.5; border-top:1px solid rgba(255,255,255,0.05); padding-top:15px; letter-spacing: 1px;">© 2026 BÜYÜKNİSAN LAW FIRM. ALL RIGHTS RESERVED.</div>
     </footer>
 
     <script>
-        const menuToggle = document.getElementById('mobile-menu');
-        const navList = document.getElementById('nav-list');
-        menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navList = document.getElementById('nav-list');
+            
+            if (menuToggle && navList) {
+                menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
+            }
 
-        document.querySelectorAll('.faq-question').forEach(btn => btn.addEventListener('click', () => btn.parentElement.classList.toggle('active')));
+            document.querySelectorAll('.sss-soru').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.parentElement.classList.toggle('active');
+                });
+            });
 
-        window.onload = () => { if(!localStorage.getItem('cookiesAccepted')) document.getElementById('cookie-banner').style.display = 'flex'; };
-        function acceptCookies() { localStorage.setItem('cookiesAccepted', 'true'); document.getElementById('cookie-banner').style.display = 'none'; }
-        function openPrivacy() { document.getElementById('privacy-modal').style.display = 'flex'; }
-        function closePrivacy() { document.getElementById('privacy-modal').style.display = 'none'; }
+            if (!localStorage.getItem('cookiesAccepted')) {
+                const banner = document.getElementById('cookie-banner');
+                if(banner) banner.style.display = 'flex';
+            }
+        });
+
+        function acceptCookies() { 
+            localStorage.setItem('cookiesAccepted', 'true'); 
+            const banner = document.getElementById('cookie-banner');
+            if(banner) banner.style.display = 'none'; 
+        }
+        function openKVKK() { 
+            const modal = document.getElementById('kvkk-modal');
+            if(modal) modal.style.display = 'flex'; 
+        }
+        function closeKVKK() { 
+            const modal = document.getElementById('kvkk-modal');
+            if(modal) modal.style.display = 'none'; 
+        }
     </script>
 </body>
 </html>
