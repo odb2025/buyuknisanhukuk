@@ -32,6 +32,26 @@
             overflow-x: hidden;
         }
 
+        /* --- PREMIUM DETAYLAR (İnce İşçilik) --- */
+        ::selection {
+            background-color: var(--altin);
+            color: var(--ana-yesil);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--ana-yesil); 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--altin); 
+        }
+
         /* --- HEADER & LOGO --- */
         header {
             background: rgba(255, 255, 255, 0.98);
@@ -129,10 +149,15 @@
         #kvkk-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 4000; display: none; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(3px); }
         .modal-content { background: white; padding: 50px; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; }
 
-        /* --- FLOAT BUTTONS --- */
+        /* --- FLOAT BUTTONS & TOOLTIP --- */
         .float-btns { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 2000; }
         .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.15); text-decoration: none; font-size: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .float-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+        
+        .wa-wrapper { position: relative; display: flex; align-items: center; }
+        .wa-tooltip { position: absolute; right: 65px; background: var(--beyaz); color: var(--ana-yesil); padding: 10px 18px; border-radius: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); font-size: 13px; font-weight: 700; white-space: nowrap; opacity: 0; transform: translateX(20px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; border: 1px solid #eaeaea; }
+        .wa-tooltip::after { content: ''; position: absolute; top: 50%; right: -6px; transform: translateY(-50%); border-width: 6px 0 6px 6px; border-style: solid; border-color: transparent transparent transparent var(--beyaz); }
+        .wa-tooltip.show { opacity: 1; transform: translateX(0); }
 
         /* --- FOOTER --- */
         footer { background: var(--ana-yesil); padding: 30px 8% 20px; text-align: center; }
@@ -150,6 +175,7 @@
             .section { padding: 60px 5%; }
             .form-row { grid-template-columns: 1fr; }
             .float-btn { width: 45px; height: 45px; font-size: 18px; }
+            .wa-tooltip { display: none; /* Mobilde kalabalık yapmaması için gizlendi */ }
         }
     </style>
 </head>
@@ -171,7 +197,7 @@
                     <a class="lang-btn">TR <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
                     <ul class="lang-menu">
                         <li><a href="en.html">English</a></li>
-                        </ul>
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -260,9 +286,12 @@
         <a href="https://t.me/" class="float-btn" style="background: var(--tg-mavi);" target="_blank" title="Telegram'dan Yazın">
             <i class="fab fa-telegram-plane"></i>
         </a>
-        <a href="https://wa.me/90XXXXXXXXXX" class="float-btn" style="background: var(--wp-yesil);" target="_blank" title="WhatsApp'tan Yazın">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+        <div class="wa-wrapper">
+            <div class="wa-tooltip" id="wa-tooltip">Size nasıl yardımcı olabiliriz?</div>
+            <a href="https://wa.me/90XXXXXXXXXX" class="float-btn" style="background: var(--wp-yesil);" target="_blank" title="WhatsApp'tan Yazın">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
     </div>
 
     <footer>
@@ -280,7 +309,7 @@
                 menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
             }
 
-            // --- Mobil Cihazlar İçin Dil Menüsü Açma/Kapama ---
+            // --- Mobil Cihazlar İçin Dil Menüsü ---
             const langMenuContainer = document.getElementById('lang-menu-container');
             if(window.innerWidth <= 768 && langMenuContainer) {
                 langMenuContainer.addEventListener('click', (e) => {
@@ -306,11 +335,7 @@
 
             // --- Scroll Animasyonları ---
             const faders = document.querySelectorAll('.fade-in');
-            const appearOptions = {
-                threshold: 0.15,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
+            const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
             const appearOnScroll = new IntersectionObserver(function(entries, observer) {
                 entries.forEach(entry => {
                     if (!entry.isIntersecting) return;
@@ -319,9 +344,17 @@
                 });
             }, appearOptions);
 
-            faders.forEach(fader => {
-                appearOnScroll.observe(fader);
-            });
+            faders.forEach(fader => { appearOnScroll.observe(fader); });
+
+            // --- WhatsApp Konuşma Balonu Animasyonu ---
+            setTimeout(() => {
+                const tooltip = document.getElementById('wa-tooltip');
+                if(tooltip) {
+                    tooltip.classList.add('show');
+                    // 10 saniye sonra nazikçe gizle
+                    setTimeout(() => { tooltip.classList.remove('show'); }, 10000);
+                }
+            }, 3000); // Sayfa açıldıktan 3 saniye sonra göster
         });
 
         // --- Fonksiyonlar ---
