@@ -60,22 +60,22 @@
         .lang-btn { border: 1px solid var(--ana-yesil); padding: 5px 12px; font-size: 11px; text-decoration: none; color: var(--ana-yesil); transition: all 0.3s; }
         .lang-btn:hover { background: var(--ana-yesil); color: var(--beyaz); }
 
-        /* --- HERO (Daha da Minimalize Edildi) --- */
+        /* --- HERO --- */
         .hero { 
-            height: 25vh; /* Yükseklik belirgin şekilde düşürüldü (Eski: 45vh) */
-            min-height: 200px; /* Mobil cihazlar için güvenlik yüksekliği */
+            height: 25vh; 
+            min-height: 200px; 
             background: linear-gradient(135deg, #083224 0%, #051e15 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 60px; /* Header yüksekliği kadar boşluk */
+            margin-top: 60px; 
             color: var(--altin);
             text-align: center;
             padding: 0 5%;
         }
         .hero-title { 
             font-family: 'Cinzel', serif; 
-            font-size: 2rem; /* Font boyutu hafifçe dengelendi */
+            font-size: 2rem; 
             letter-spacing: 3px; 
             font-weight: 400; 
         }
@@ -99,7 +99,7 @@
         /* --- KARTLAR --- */
         .kart-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
         .kart { background: var(--beyaz); padding: 40px 30px; border: 1px solid #eaeaea; border-top: 3px solid var(--ana-yesil); text-align: left; transition: all 0.4s ease; }
-        .kart:hover { transform: translateY(-3px); border-top-color: var(--altin); box-shadow: 0 15px 40px rgba(0,0,0,0.03); }
+        .kart:hover { transform: translateY(-5px) scale(1.01); border-top-color: var(--altin); box-shadow: 0 15px 40px rgba(0,0,0,0.04); }
         .kart h3 { font-family: 'Cinzel', serif; color: var(--ana-yesil); font-size: 1.1rem; margin-bottom: 15px; font-weight: 700; }
         .kart p { font-size: 0.95rem; color: #555; }
 
@@ -114,9 +114,21 @@
 
         /* --- İLETİŞİM --- */
         .iletisim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto; }
-        .iletisim-box { padding: 40px 30px; background: var(--beyaz); border: 1px solid #eaeaea; }
+        .iletisim-box { padding: 40px 30px; background: var(--beyaz); border: 1px solid #eaeaea; transition: transform 0.4s ease; }
+        .iletisim-box:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .iletisim-box h4 { font-family: 'Cinzel', serif; font-size: 1rem; margin-bottom: 10px; color: var(--ana-yesil); }
         .iletisim-box p { font-size: 0.95rem; color: #555; }
+
+        /* --- ANIMASYONLAR (YENİ EKLENDİ) --- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* --- MODAL & COOKIE --- */
         #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--ana-yesil); color: white; padding: 15px 8%; display: none; justify-content: space-between; align-items: center; z-index: 3000; font-size: 13px; }
@@ -129,10 +141,10 @@
         .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.15); text-decoration: none; font-size: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .float-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
-        /* --- FOOTER (Daha da Minimalize Edildi) --- */
+        /* --- FOOTER --- */
         footer { 
             background: var(--ana-yesil); 
-            padding: 30px 8% 20px; /* Dolgular azaltıldı (Eski: 60px 8% 40px) */
+            padding: 30px 8% 20px; 
             text-align: center; 
         }
 
@@ -142,7 +154,7 @@
             nav { position: absolute; top: 100%; left: 0; width: 100%; background: white; display: none; flex-direction: column; padding: 25px; border-top: 1px solid #eee; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
             nav.active { display: flex; }
             nav ul { flex-direction: column; gap: 20px; }
-            .hero { height: auto; padding: 60px 5%; /* Mobilde daha da kompakt */ }
+            .hero { height: auto; padding: 60px 5%; }
             .hero-title { font-size: 1.6rem; }
             .section { padding: 60px 5%; }
             .float-btn { width: 45px; height: 45px; font-size: 18px; }
@@ -169,34 +181,34 @@
     </header>
 
     <section class="hero">
-        <h1 class="hero-title">
+        <h1 class="hero-title fade-in">
             BÜYÜKNİSAN HUKUK BÜROSU
             <span class="hero-subtitle">Çevrim İçi ve Hızlı Hukuki Çözümler</span>
         </h1>
     </section>
 
     <section id="kurumsal" class="section">
-        <h2 class="section-title">Kurumsal Profilimiz</h2>
-        <p style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1rem; font-weight: 300;">
+        <h2 class="section-title fade-in">Kurumsal Profilimiz</h2>
+        <p class="fade-in" style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1rem; font-weight: 300;">
             "Büyüknisan Hukuk Bürosu, dijitalleşen dünyanın gerekliliklerine uyum sağlayan, İstanbul merkezli bir hukuk ofisidir. Çevrimiçi platformlar aracılığıyla tüm dünyaya açık ve hızlı bir hizmet sunmaktayız."
         </p>
     </section>
 
     <section id="uzmanliklar" class="section" style="background: var(--acik-gri);">
-        <h2 class="section-title">Uzmanlık Alanlarımız</h2>
+        <h2 class="section-title fade-in">Uzmanlık Alanlarımız</h2>
         <div class="kart-container">
-            <div class="kart"><h3>Vatandaşlık & Yabancılar</h3><p>Vatandaşlık iktisabı, ikamet izinleri ve deport süreçlerinin yönetimi.</p></div>
-            <div class="kart"><h3>Sağlık & Tıp Hukuku</h3><p>Tıbbi malpraktis ve hasta hakları uyuşmazlıklarında nitelikli danışmanlık.</p></div>
-            <div class="kart"><h3>Borçlar & Tazminat</h3><p>Maddi ve manevi tazminat taleplerinin yargısal merciler nezdinde takibi.</p></div>
-            <div class="kart"><h3>Ceza Hukuku</h3><p>Soruşturma ve kovuşturma safhalarında profesyonel müdafiilik hizmeti.</p></div>
-            <div class="kart"><h3>İdare Hukuku</h3><p>İdari işlemlerin iptali ve tam yargı davalarının hukuki süreç yönetimi.</p></div>
-            <div class="kart"><h3>İcra & İflas Hukuku</h3><p>Alacak takibi ve icra-iflas süreçlerinin profesyonel yönetimi.</p></div>
+            <div class="kart fade-in" style="transition-delay: 0.1s;"><h3>Vatandaşlık & Yabancılar</h3><p>Vatandaşlık iktisabı, ikamet izinleri ve deport süreçlerinin yönetimi.</p></div>
+            <div class="kart fade-in" style="transition-delay: 0.2s;"><h3>Sağlık & Tıp Hukuku</h3><p>Tıbbi malpraktis ve hasta hakları uyuşmazlıklarında nitelikli danışmanlık.</p></div>
+            <div class="kart fade-in" style="transition-delay: 0.3s;"><h3>Borçlar & Tazminat</h3><p>Maddi ve manevi tazminat taleplerinin yargısal merciler nezdinde takibi.</p></div>
+            <div class="kart fade-in" style="transition-delay: 0.4s;"><h3>Ceza Hukuku</h3><p>Soruşturma ve kovuşturma safhalarında profesyonel müdafiilik hizmeti.</p></div>
+            <div class="kart fade-in" style="transition-delay: 0.5s;"><h3>İdare Hukuku</h3><p>İdari işlemlerin iptali ve tam yargı davalarının hukuki süreç yönetimi.</p></div>
+            <div class="kart fade-in" style="transition-delay: 0.6s;"><h3>İcra & İflas Hukuku</h3><p>Alacak takibi ve icra-iflas süreçlerinin profesyonel yönetimi.</p></div>
         </div>
     </section>
 
     <section id="sss" class="section">
-        <h2 class="section-title">Sıkça Sorulan Sorular</h2>
-        <div class="sss-container">
+        <h2 class="section-title fade-in">Sıkça Sorulan Sorular</h2>
+        <div class="sss-container fade-in">
             <div class="sss-item">
                 <button class="sss-soru">Dijital danışmanlık süreci nasıl başlar?</button>
                 <div class="sss-cevap">WhatsApp veya Telegram üzerinden ilk başvurunuzu takiben çevrimiçi randevu oluşturulmaktadır.</div>
@@ -205,13 +217,13 @@
     </section>
 
     <section id="iletisim" class="section" style="background: var(--acik-gri);">
-        <h2 class="section-title">Dijital İletişim</h2>
+        <h2 class="section-title fade-in">Dijital İletişim</h2>
         <div class="iletisim-grid">
-            <div class="iletisim-box">
+            <div class="iletisim-box fade-in" style="transition-delay: 0.1s;">
                 <h4>Çevrimiçi Hizmet</h4>
                 <p>Konum bağımsız, global erişimli çevrim içi danışmanlık modeli.</p>
             </div>
-            <div class="iletisim-box">
+            <div class="iletisim-box fade-in" style="transition-delay: 0.3s;">
                 <h4>Kurumsal E-Posta</h4>
                 <p>info@buyuknisanhukuk.com</p>
             </div>
@@ -250,6 +262,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // --- Mobil Menü ---
             const menuToggle = document.getElementById('mobile-menu');
             const navList = document.getElementById('nav-list');
             
@@ -257,18 +270,40 @@
                 menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
             }
 
+            // --- SSS Akordiyon ---
             document.querySelectorAll('.sss-soru').forEach(btn => {
                 btn.addEventListener('click', () => {
                     btn.parentElement.classList.toggle('active');
                 });
             });
 
+            // --- Çerez Bildirimi ---
             if (!localStorage.getItem('cookiesAccepted')) {
                 const banner = document.getElementById('cookie-banner');
                 if(banner) banner.style.display = 'flex';
             }
+
+            // --- Scroll (Kaydırma) Animasyonları ---
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.15, // Elemanın %15'i ekranda göründüğünde tetikle
+                rootMargin: "0px 0px -50px 0px" // Aşağıdan 50px pay bırak
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Animasyon 1 kere çalışsın
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
         });
 
+        // --- Fonksiyonlar ---
         function acceptCookies() { 
             localStorage.setItem('cookiesAccepted', 'true'); 
             const banner = document.getElementById('cookie-banner');
