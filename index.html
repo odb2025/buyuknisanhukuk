@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Büyüknisan Hukuk Bürosu | İstanbul | Dijital Hukuk Hizmetleri</title>
+    <title>Büyüknisan Hukuk Bürosu | İstanbul | Çevrimiçi Hukuk Hizmetleri</title>
     
     <meta name="robots" content="noindex, nofollow">
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
         :root {
@@ -69,7 +69,7 @@
             color: var(--altin);
             text-align: center;
         }
-        .hero-title { font-family: 'Cinzel'; font-size: 2.5rem; letter-spacing: 5px; opacity: 0.9; padding: 20px; }
+        .hero-title { font-family: 'Cinzel', serif; font-size: 2.5rem; letter-spacing: 5px; opacity: 0.9; padding: 20px; }
 
         /* --- GENEL SECTION --- */
         .section { padding: 80px 8%; text-align: center; }
@@ -104,4 +104,149 @@
 
         /* --- FLOAT BUTTONS --- */
         .float-btns { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
-        .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 12px rgba(0
+        .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none; font-size: 24px; transition: transform 0.2s; }
+        .float-btn:hover { transform: scale(1.1); }
+
+        /* --- FOOTER --- */
+        footer { background: var(--ana-yesil); padding: 40px 8%; text-align: center; }
+
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+            nav { position: absolute; top: 100%; left: 0; width: 100%; background: white; display: none; flex-direction: column; padding: 25px; border-top: 1px solid #eee; }
+            nav.active { display: flex; }
+            nav ul { flex-direction: column; gap: 20px; }
+            .hero-title { font-size: 1.5rem; }
+            .section { padding: 60px 5%; }
+            .float-btn { width: 45px; height: 45px; font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo-container">
+            <span class="logo-text">BÜYÜKNİSAN</span>
+            <span class="logo-subtext">Hukuk Bürosu</span>
+        </a>
+        <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+        <nav id="nav-list">
+            <ul>
+                <li><a href="#kurumsal">Kurumsal</a></li>
+                <li><a href="#uzmanliklar">Uzmanlıklar</a></li>
+                <li><a href="#sss">S.S.S.</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="en.html" class="lang-btn">EN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero-title">BÜYÜKNİSAN HUKUK BÜROSU<br><span style="font-size: 1rem; letter-spacing: 2px;">ÇEVRİM İÇİ VE HIZLI HUKUKİ ÇÖZÜMLER</span></h1>
+    </section>
+
+    <section id="kurumsal" class="section">
+        <h2 class="section-title">Kurumsal Profilimiz</h2>
+        <p style="max-width: 850px; margin: 0 auto; font-style: italic; color: #444; font-size: 1.1rem;">
+            "Büyüknisan Hukuk Bürosu, dijitalleşen dünyanın gerekliliklerine uyum sağlayan, İstanbul merkezli bir hukuk ofisidir. Çevrimiçi platformlar aracılığıyla tüm dünyaya açık, hızlı ve yüksek prestijli bir hizmet sunmaktayız."
+        </p>
+    </section>
+
+    <section id="uzmanliklar" class="section" style="background: var(--acik-gri);">
+        <h2 class="section-title">Uzmanlık Alanlarımız</h2>
+        <div class="kart-container">
+            <div class="kart"><h3>Vatandaşlık & Yabancılar</h3><p>Vatandaşlık iktisabı, ikamet izinleri ve deport süreçlerinin dijital yönetimi.</p></div>
+            <div class="kart"><h3>Sağlık & Tıp Hukuku</h3><p>Tıbbi malpraktis ve hasta hakları uyuşmazlıklarında akademik danışmanlık.</p></div>
+            <div class="kart"><h3>Borçlar & Tazminat</h3><p>Maddi ve manevi tazminat taleplerinin yargısal merciler nezdinde takibi.</p></div>
+            <div class="kart"><h3>Ceza Hukuku</h3><p>Soruşturma ve kovuşturma safhalarında profesyonel müdafiilik hizmeti.</p></div>
+            <div class="kart"><h3>İdare Hukuku</h3><p>İdari işlemlerin iptali ve tam yargı davalarının hukuki süreç yönetimi.</p></div>
+            <div class="kart"><h3>İcra & İflas Hukuku</h3><p>Alacak takibi ve icra-iflas süreçlerinin profesyonel yönetimi.</p></div>
+        </div>
+    </section>
+
+    <section id="sss" class="section">
+        <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+        <div class="sss-container">
+            <div class="sss-item">
+                <button class="sss-soru">Dijital danışmanlık süreci nasıl başlar?</button>
+                <div class="sss-cevap">WhatsApp veya Telegram üzerinden ilk başvurunuzu takiben çevrimiçi randevu oluşturulmaktadır.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="section" style="background: var(--acik-gri);">
+        <h2 class="section-title">Dijital İletişim</h2>
+        <div class="iletisim-grid">
+            <div class="iletisim-box"><h4>Çevrimiçi Hizmet</h4><p>Konum bağımsız, global erişimli dijital danışmanlık modeli.</p></div>
+            <div class="iletisim-box"><h4>Kurumsal E-Posta</h4><p>info@buyuknisanhukuk.com</p></div>
+        </div>
+    </section>
+
+    <div id="cookie-banner">
+        <span>Deneyiminiz için çerezler kullanılmaktadır. <span onclick="openKVKK()" style="text-decoration:underline; cursor:pointer;">KVKK Metni</span></span>
+        <button class="cookie-btn" onclick="acceptCookies()">Kabul Et</button>
+    </div>
+
+    <div id="kvkk-modal">
+        <div class="modal-content">
+            <span style="position:absolute; top:20px; right:20px; cursor:pointer; font-size:24px; color:#333;" onclick="closeKVKK()">&times;</span>
+            <h2 style="font-family: 'Cinzel', serif; color: var(--ana-yesil); margin-bottom: 20px;">KVKK AYDINLATMA METNİ</h2>
+            <p style="font-size: 0.9rem; text-align: justify; color: #333;">Paylaştığınız veriler sadece danışmanlık taleplerinizin karşılanması amacıyla işlenmektedir.</p>
+        </div>
+    </div>
+
+    <div class="float-btns">
+        <a href="mailto:info@buyuknisanhukuk.com" class="float-btn" style="background: var(--altin);" title="E-Posta Gönder">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://t.me/" class="float-btn" style="background: var(--tg-mavi);" target="_blank" title="Telegram'dan Yazın">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://wa.me/90XXXXXXXXXX" class="float-btn" style="background: var(--wp-yesil);" target="_blank" title="WhatsApp'tan Yazın">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer>
+        <div style="font-family:'Cinzel', serif; color:var(--altin); font-size:1.5rem; margin-bottom:10px;">BÜYÜKNİSAN HUKUK BÜROSU</div>
+        <div style="font-size:0.8rem; color: #fff; opacity:0.6; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;">© 2026 BÜYÜKNİSAN HUKUK BÜROSU. TÜM HAKLARI SAKLIDIR.</div>
+    </footer>
+
+    <script>
+        // Sayfa yüklendiğinde çalışacak güvenli JavaScript kodları
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navList = document.getElementById('nav-list');
+            
+            if (menuToggle && navList) {
+                menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
+            }
+
+            document.querySelectorAll('.sss-soru').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.parentElement.classList.toggle('active');
+                });
+            });
+
+            if (!localStorage.getItem('cookiesAccepted')) {
+                const banner = document.getElementById('cookie-banner');
+                if(banner) banner.style.display = 'flex';
+            }
+        });
+
+        function acceptCookies() { 
+            localStorage.setItem('cookiesAccepted', 'true'); 
+            const banner = document.getElementById('cookie-banner');
+            if(banner) banner.style.display = 'none'; 
+        }
+        function openKVKK() { 
+            const modal = document.getElementById('kvkk-modal');
+            if(modal) modal.style.display = 'flex'; 
+        }
+        function closeKVKK() { 
+            const modal = document.getElementById('kvkk-modal');
+            if(modal) modal.style.display = 'none'; 
+        }
+    </script>
+</body>
+</html>
