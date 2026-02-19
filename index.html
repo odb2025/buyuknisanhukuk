@@ -108,6 +108,14 @@
         .section-title { font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--ana-yesil); margin-bottom: 60px; font-weight: 400; position: relative; }
         .section-title::after { content: ''; width: 30px; height: 1px; background: var(--altin); position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); }
 
+        /* --- ÇALIŞMA PRENSİPLERİ (YENİ) --- */
+        .prensip-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1000px; margin: 60px auto 0; }
+        .prensip-kutu { padding: 20px; transition: transform 0.4s ease; }
+        .prensip-ikon { font-size: 2.5rem; color: var(--altin); margin-bottom: 20px; transition: transform 0.3s ease; }
+        .prensip-kutu:hover .prensip-ikon { transform: scale(1.1); }
+        .prensip-baslik { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--ana-yesil); margin-bottom: 15px; font-weight: 700; }
+        .prensip-metin { font-size: 0.95rem; color: #555; }
+
         /* --- KARTLAR --- */
         .kart-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
         .kart { background: var(--beyaz); padding: 40px 30px; border: 1px solid #eaeaea; border-top: 3px solid var(--ana-yesil); text-align: left; transition: all 0.4s ease; }
@@ -175,7 +183,7 @@
             .section { padding: 60px 5%; }
             .form-row { grid-template-columns: 1fr; }
             .float-btn { width: 45px; height: 45px; font-size: 18px; }
-            .wa-tooltip { display: none; /* Mobilde kalabalık yapmaması için gizlendi */ }
+            .wa-tooltip { display: none; }
         }
     </style>
 </head>
@@ -215,6 +223,24 @@
         <p class="fade-in" style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1rem; font-weight: 300;">
             "Büyüknisan Hukuk Bürosu, dijitalleşen dünyanın gerekliliklerine uyum sağlayan, İstanbul merkezli bir hukuk ofisidir. Çevrimiçi platformlar aracılığıyla tüm dünyaya açık ve hızlı bir hizmet sunmaktayız."
         </p>
+        
+        <div class="prensip-container">
+            <div class="prensip-kutu fade-in" style="transition-delay: 0.1s;">
+                <i class="fas fa-lock prensip-ikon"></i>
+                <h3 class="prensip-baslik">Mutlak Gizlilik</h3>
+                <p class="prensip-metin">Müvekkil bilgilerinin korunması ve sır saklama yükümlülüğü tavizsiz temel ilkemizdir.</p>
+            </div>
+            <div class="prensip-kutu fade-in" style="transition-delay: 0.3s;">
+                <i class="fas fa-scale-balanced prensip-ikon"></i>
+                <h3 class="prensip-baslik">Şeffaf Süreç</h3>
+                <p class="prensip-metin">Hukuki adımların her aşamasında düzenli, açık ve anlaşılır bilgilendirme sağlanır.</p>
+            </div>
+            <div class="prensip-kutu fade-in" style="transition-delay: 0.5s;">
+                <i class="fas fa-globe prensip-ikon"></i>
+                <h3 class="prensip-baslik">Küresel Erişim</h3>
+                <p class="prensip-metin">Mekandan bağımsız, güçlü dijital altyapımız ile dünyanın her yerinden anında iletişim.</p>
+            </div>
+        </div>
     </section>
 
     <section id="uzmanliklar" class="section" style="background: var(--acik-gri);">
@@ -301,15 +327,12 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // --- Mobil Menü ---
             const menuToggle = document.getElementById('mobile-menu');
             const navList = document.getElementById('nav-list');
-            
             if (menuToggle && navList) {
                 menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
             }
 
-            // --- Mobil Cihazlar İçin Dil Menüsü ---
             const langMenuContainer = document.getElementById('lang-menu-container');
             if(window.innerWidth <= 768 && langMenuContainer) {
                 langMenuContainer.addEventListener('click', (e) => {
@@ -320,20 +343,17 @@
                 });
             }
 
-            // --- SSS Akordiyon ---
             document.querySelectorAll('.sss-soru').forEach(btn => {
                 btn.addEventListener('click', () => {
                     btn.parentElement.classList.toggle('active');
                 });
             });
 
-            // --- Çerez Bildirimi ---
             if (!localStorage.getItem('cookiesAccepted')) {
                 const banner = document.getElementById('cookie-banner');
                 if(banner) banner.style.display = 'flex';
             }
 
-            // --- Scroll Animasyonları ---
             const faders = document.querySelectorAll('.fade-in');
             const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
             const appearOnScroll = new IntersectionObserver(function(entries, observer) {
@@ -346,18 +366,15 @@
 
             faders.forEach(fader => { appearOnScroll.observe(fader); });
 
-            // --- WhatsApp Konuşma Balonu Animasyonu ---
             setTimeout(() => {
                 const tooltip = document.getElementById('wa-tooltip');
                 if(tooltip) {
                     tooltip.classList.add('show');
-                    // 10 saniye sonra nazikçe gizle
                     setTimeout(() => { tooltip.classList.remove('show'); }, 10000);
                 }
-            }, 3000); // Sayfa açıldıktan 3 saniye sonra göster
+            }, 3000);
         });
 
-        // --- Fonksiyonlar ---
         function acceptCookies() { 
             localStorage.setItem('cookiesAccepted', 'true'); 
             const banner = document.getElementById('cookie-banner');
