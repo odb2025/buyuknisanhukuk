@@ -2,8 +2,9 @@
 document.addEventListener("DOMContentLoaded",()=>{
   const menuButton=document.querySelector(".menu-toggle");
   const nav=document.getElementById("main-nav");
-  menuButton?.addEventListener("click",()=>{const open=menuButton.getAttribute("aria-expanded")==="true";menuButton.setAttribute("aria-expanded",String(!open));nav?.classList.toggle("open",!open)});
-  nav?.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menuButton?.setAttribute("aria-expanded","false")}));
+  const setMenuState=open=>{menuButton?.setAttribute("aria-expanded",String(open));menuButton?.setAttribute("aria-label",open?menuButton.dataset.closeLabel:menuButton.dataset.openLabel);const accessibleLabel=menuButton?.querySelector(".sr-only");if(accessibleLabel)accessibleLabel.textContent=open?menuButton.dataset.closeLabel:menuButton.dataset.openLabel;nav?.classList.toggle("open",open)};
+  menuButton?.addEventListener("click",()=>setMenuState(menuButton.getAttribute("aria-expanded")!=="true"));
+  nav?.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>setMenuState(false)));
 
   const language=document.querySelector(".language");
   const languageButton=language?.querySelector("button");
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   document.querySelectorAll("[data-open-privacy]").forEach(button=>button.addEventListener("click",openModal));
   document.querySelector("[data-close-privacy]")?.addEventListener("click",closeModal);
   modal?.addEventListener("click",event=>{if(event.target===modal)closeModal()});
-  document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!modal?.hidden)closeModal();if(event.key==="Escape"){language?.classList.remove("open");languageButton?.setAttribute("aria-expanded","false");nav?.classList.remove("open");menuButton?.setAttribute("aria-expanded","false")}if(event.key==="Tab"&&!modal?.hidden){const focusable=[...modal.querySelectorAll("a,button,[tabindex]:not([tabindex='-1'])")];if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}}});
+  document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!modal?.hidden)closeModal();if(event.key==="Escape"){language?.classList.remove("open");languageButton?.setAttribute("aria-expanded","false");setMenuState(false)}if(event.key==="Tab"&&!modal?.hidden){const focusable=[...modal.querySelectorAll("a,button,[tabindex]:not([tabindex='-1'])")];if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}}});
 
   const form=document.getElementById("contact-form");
   const loadedAt=Date.now();
