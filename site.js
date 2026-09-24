@@ -30,5 +30,24 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   const form=document.getElementById("contact-form");
   const loadedAt=Date.now();
-  form?.addEventListener("submit",async event=>{event.preventDefault();const button=form.querySelector(".submit");const status=document.getElementById("form-status");const trap=form.querySelector(".honeypot");if(trap?.value||Date.now()-loadedAt<2500){status.textContent=form.dataset.error;status.className="form-status error";return}button.disabled=true;button.textContent=form.dataset.sending;status.className="form-status";try{const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});if(!response.ok)throw new Error("submit failed");status.textContent=form.dataset.success;status.className="form-status success";form.reset()}catch(error){status.textContent=form.dataset.error;status.className="form-status error"}finally{button.disabled=false;button.textContent=form.dataset.submit}});
+  form?.addEventListener("submit",event=>{
+    event.preventDefault();
+    const status=document.getElementById("form-status");
+    const trap=form.querySelector(".honeypot");
+    if(trap?.value||Date.now()-loadedAt<1500){status.textContent=form.dataset.error;status.className="form-status error";return}
+    const data=new FormData(form);
+    const english=document.body.dataset.lang==="en";
+    const name=String(data.get(english?"full_name":"ad_soyad")||"").trim();
+    const email=String(data.get("email")||"").trim();
+    const phone=String(data.get(english?"phone":"telefon")||"").trim();
+    const subject=String(data.get(english?"subject":"konu")||"").trim();
+    const message=String(data.get(english?"message":"mesaj")||"").trim();
+    const labels=english?{request:"Website contact request",name:"Name",email:"Email",phone:"Phone",message:"Message"}:{request:"Web sitesi iletişim talebi",name:"Ad soyad",email:"E-posta",phone:"Telefon",message:"Mesaj"};
+    const body=[`${labels.name}: ${name}`,`${labels.email}: ${email}`,phone?`${labels.phone}: ${phone}`:"",`${labels.message}:`,message].filter(Boolean).join("\n");
+    const target=form.dataset.emailTarget;
+    const mailto=`mailto:${target}?subject=${encodeURIComponent(`${labels.request}: ${subject}`)}&body=${encodeURIComponent(body)}`;
+    status.textContent=form.dataset.success;
+    status.className="form-status success";
+    window.location.href=mailto;
+  });
 });
