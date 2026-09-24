@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://buyuknisanhukuk.com/sitemap.xml
+Disallow: /
